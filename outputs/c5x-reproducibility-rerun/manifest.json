@@ -1,0 +1,279 @@
+{
+  "schema": "c5x-reproducibility-manifest-v2",
+  "generated_utc": "2026-08-06T18:24:07.148498+00:00",
+  "entry_scripts": [
+    "calculations\\c5ax_reflection_retained_density.py",
+    "calculations\\c5ay_reflection_covariant_retained_coordinates.py",
+    "calculations\\c5az_shifted_coordinate_package_regression.py",
+    "calculations\\c5ba_shifted_normalized_shell_contract.py",
+    "calculations\\c5bb_shifted_good_sector_expansion.py",
+    "calculations\\c5bc_shifted_disintegration_rn_expansion.py",
+    "calculations\\c5bd_analytic_shifted_rn_coefficients.py",
+    "calculations\\c5be_compact_conditional_centering.py",
+    "calculations\\c5bf_deterministic_fiber_parity_bound.py",
+    "calculations\\c5bg_uniform_chart_margin_rge3.py",
+    "calculations\\c5bh_sharpen_chart_or_delayed_start.py",
+    "calculations\\c5bi_compact_remainder_locality.py",
+    "calculations\\c5x_exact_finite_claim_certificates.py"
+  ],
+  "local_python_dependency_count": 30,
+  "environment": {
+    "python_executable": "C:\\Users\\gratc\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "python_version": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+    "python_implementation": "CPython",
+    "numpy_version": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pythonhashseed": "0",
+    "pythondontwritebytecode": "1",
+    "omp_num_threads": "1",
+    "openblas_num_threads": "1",
+    "mkl_num_threads": "1"
+  },
+  "files": [
+    {
+      "path": "calculations/c5ad_cubic_coordinate_normalization.py",
+      "bytes": 7944,
+      "sha256": "DA15E7E6750157CA2672C18B21D15602F8A52E7B76E89A22CD4550BB99537585"
+    },
+    {
+      "path": "calculations/c5ae_jacobian_half_density.py",
+      "bytes": 12111,
+      "sha256": "61AF3DB793D24CDFA7F7AC3D8F3D88B963D6F0EA94098EAB3AAB1BC6A89C84F8"
+    },
+    {
+      "path": "calculations/c5af_density_output_classification.py",
+      "bytes": 8504,
+      "sha256": "554BA1E5EDF9C326F048303B00501FA2F42FE3DC594A4D33AA10272BFE0BF4A5"
+    },
+    {
+      "path": "calculations/c5ak_local_holonomy_disintegration.py",
+      "bytes": 15014,
+      "sha256": "9A6D11E5AFC2A2ADEA1E7780CB4CE2CD324EE9F418231347323EC06AF78AB322"
+    },
+    {
+      "path": "calculations/c5al_gauge_zero_reference.py",
+      "bytes": 12890,
+      "sha256": "4341368906B270EE7E40DD9FEAD58E0336AD5AD4DC0C52524FB19E5461553B79"
+    },
+    {
+      "path": "calculations/c5am_nonlinear_gauge_haar.py",
+      "bytes": 18095,
+      "sha256": "879BF9C2871C9AEFFFDA922514EFA8964F98DB114C6276F3C389FD32139CB427"
+    },
+    {
+      "path": "calculations/c5an_gauge_haar_half_density_matching.py",
+      "bytes": 18299,
+      "sha256": "3ACF1B7F501EC8DF9E4E1F5A76B055ACAAA435BF5DF1DE61275538DCA8FCE7CD"
+    },
+    {
+      "path": "calculations/c5ao_conditional_half_density_projection.py",
+      "bytes": 16073,
+      "sha256": "7E735B0FE97C5C33A2333A47BE082C9A88EF84ADBB313338B3D454A1F9A9C938"
+    },
+    {
+      "path": "calculations/c5aq_centered_density_coefficient_envelope.py",
+      "bytes": 17852,
+      "sha256": "656C624C23AFE5B719FAAA58B8364A92DD7904F821B00497F9954FD19E0EB5FF"
+    },
+    {
+      "path": "calculations/c5au_retained_fp_source_formula.py",
+      "bytes": 16388,
+      "sha256": "91F725F5C0C5AFF3C2FE36398215C4AD60130D58D5AB5A3F86F0C005A72807DF"
+    },
+    {
+      "path": "calculations/c5av_density_degree_odd_bound.py",
+      "bytes": 16620,
+      "sha256": "8CEC1FA1933CBB23471B0B86F813D1E698A83F4793B37125A95C365AFBF87145"
+    },
+    {
+      "path": "calculations/c5aw_odd_bilinear_envelope.py",
+      "bytes": 27309,
+      "sha256": "14CB892C8F7B574245ECE062C3D55EE3163206D21ADC67CB798E4634FCB9E33E"
+    },
+    {
+      "path": "calculations/c5ax_reflection_retained_density.py",
+      "bytes": 18079,
+      "sha256": "D05EA7BA3B06177D157B5E9D4926568B4E07AF15D2EFA9F2083AD31CBBE2334C"
+    },
+    {
+      "path": "calculations/c5ay_reflection_covariant_retained_coordinates.py",
+      "bytes": 18389,
+      "sha256": "7199A62CEE389E6AC65DA36A51A69E13DCFCD3AD14C9FB1E739544403FDE7614"
+    },
+    {
+      "path": "calculations/c5az_shifted_coordinate_package_regression.py",
+      "bytes": 22669,
+      "sha256": "BCF52BAE6DE4BA50B9B4FA10E3258DA1AEBAC4D8C4382D052A3E5F1438778E87"
+    },
+    {
+      "path": "calculations/c5ba_shifted_normalized_shell_contract.py",
+      "bytes": 16654,
+      "sha256": "AC51B5DE5B865DEE75BDF587B7DF7E4CAFDA5098D63093C8F122492C098455A2"
+    },
+    {
+      "path": "calculations/c5bb_shifted_good_sector_expansion.py",
+      "bytes": 20876,
+      "sha256": "173A5DDE98352E49B2B8B6F54C31E4DBAAAE227162EE75ECFB36689BAF61F57E"
+    },
+    {
+      "path": "calculations/c5bc_shifted_disintegration_rn_expansion.py",
+      "bytes": 22295,
+      "sha256": "5005A674904BF10C50D8B2D6C2C97D36C55A72138B5B9325DBBBDB420B9ED7E2"
+    },
+    {
+      "path": "calculations/c5bd_analytic_shifted_rn_coefficients.py",
+      "bytes": 22965,
+      "sha256": "A17C86CD55D22642A37B4BCE7C3E9602E3E0C1A34740523C5C6D54EB3747FBE4"
+    },
+    {
+      "path": "calculations/c5be_compact_conditional_centering.py",
+      "bytes": 18571,
+      "sha256": "C9108A420F925FB970BBC9DEF62D98C9792A308BF5E5A9EBA49ADEA2E24022D1"
+    },
+    {
+      "path": "calculations/c5bf_deterministic_fiber_parity_bound.py",
+      "bytes": 14936,
+      "sha256": "5F7FD89035C4D3CAE14791A905C3EACE34EDB9F97DDFE1940D3ADEF9C7D0404C"
+    },
+    {
+      "path": "calculations/c5bg_uniform_chart_margin_rge3.py",
+      "bytes": 15970,
+      "sha256": "5A3940FEA8AD76CAB3D3CABF386B89B8CF18A1D2EC28A3F3D2D07035688EA9CA"
+    },
+    {
+      "path": "calculations/c5bh_sharpen_chart_or_delayed_start.py",
+      "bytes": 17362,
+      "sha256": "FFB4775B17C82017CE063FDA6C863E93C768F84975B62C557FEEFAC06479E103"
+    },
+    {
+      "path": "calculations/c5bi_compact_remainder_locality.py",
+      "bytes": 22774,
+      "sha256": "9B969245E74EDAD5E9500B2FF85D01256DB0C57734DC9880059BDE47505895DF"
+    },
+    {
+      "path": "calculations/c5q_4d_cubical_incidence.py",
+      "bytes": 9269,
+      "sha256": "B9292870C74D86369B76F4A24CA524643B0D46EC80DFF35AEB76BD693D64EAE4"
+    },
+    {
+      "path": "calculations/c5r_curvature_tile_schur.py",
+      "bytes": 5633,
+      "sha256": "1D76C1E54A043FCF3CA97DC76CDC0CACE7AC27B7FC7CE97FCAA93E4063A4DEB0"
+    },
+    {
+      "path": "calculations/c5t_bch_incidence_expansion.py",
+      "bytes": 10422,
+      "sha256": "5316352A0919FFEBF2B2A6362474F324307298D5394EF06F997FD7FED709F396"
+    },
+    {
+      "path": "calculations/c5v_retained_quotient_bch_bounds.py",
+      "bytes": 16312,
+      "sha256": "333F6FBD84E5CE7F6AECE6D9CB7F9AAF630D3F8CE6BFD7DAD6D6F36FC670DD86"
+    },
+    {
+      "path": "calculations/c5w_cubic_centering.py",
+      "bytes": 8990,
+      "sha256": "B14FCA6548A43014D3C88FFC97AFDECA9F30429F7301DCC6F9C85253DE15D6E0"
+    },
+    {
+      "path": "calculations/c5x_exact_finite_claim_certificates.py",
+      "bytes": 8758,
+      "sha256": "78A22631312144C7B8751BFB48C819710DAE0DF927E33E31F964E8647DDDA7BC"
+    },
+    {
+      "path": "calculations/c5x_reproducibility_manifest.py",
+      "bytes": 3921,
+      "sha256": "65ED1FF56EB114EF71375E1E0BFEEAD2A93F40DEC9D233EFD9C81E9BCDAAF7FC"
+    },
+    {
+      "path": "calculations/run_c5x_paper_reproducibility.ps1",
+      "bytes": 8373,
+      "sha256": "A7A7A7EDA261587264ED7385EFE386A823394F19639DFAC5A24E86ADC788C77C"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5ax_reflection_retained_density.md",
+      "bytes": 5480,
+      "sha256": "FCB5C0C20DE14E55456121B4D246BED6C908C8F9FAFA81FD9365590BFC24989D"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5ay_reflection_covariant_retained_coordinates.md",
+      "bytes": 6488,
+      "sha256": "8510F0FCDF2DD11DBFAC7BAE1C0734C442716BE7CFDDF7813938994ACCA4DBC0"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5az_shifted_coordinate_package_regression.md",
+      "bytes": 5168,
+      "sha256": "C5ADA52406A01D4D3D7BDE9DF53028C1D76ACCB6EE2CD0C656B97CDC517EC0A6"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5ba_shifted_normalized_shell_contract.json",
+      "bytes": 20122,
+      "sha256": "9B63D08ED42CFBBDC31A41F40701F178D9204023B6963AFDD25B140BFCC55F3E"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bb_shifted_good_sector_expansion.json",
+      "bytes": 23576,
+      "sha256": "ADD3C8A4FAA8F543AB959EAF814FEE049370AA029387D988E416819636B8BA1F"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bc_shifted_disintegration_rn_expansion.json",
+      "bytes": 13472,
+      "sha256": "CE803F05EE35D086C96A381B9BD4E88A275D71D1D8CB3DE58B40CDDC2796BD85"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bd_analytic_shifted_rn_coefficients.json",
+      "bytes": 16898,
+      "sha256": "D0F499725E6C3E7FF2471618C260475EADFC5347AAB3DB96EC8F45188CED6769"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5be_compact_conditional_centering.json",
+      "bytes": 18422,
+      "sha256": "CEDABF6CE32F0915141A8335059BF6311BA50D61F5B37AC1424DD4946FAE8CB9"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bf_deterministic_fiber_parity_bound.json",
+      "bytes": 12184,
+      "sha256": "57EB7D6AC6AA8D8A50A13F2B75DB4E5E4640B5829692C9C1BD2D3BA929568552"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bg_uniform_chart_margin_rge3.json",
+      "bytes": 12134,
+      "sha256": "A7792C1832C69EC53ECC86EC01954AD5B13E1B3D2728AC6A6391E6968C6C129E"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bh_sharpen_chart_or_delayed_start.json",
+      "bytes": 12388,
+      "sha256": "0CC4882F0A116703D18D12B49F3CEA1502EEA0257843D8BAFB2938EB76E3A0B9"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5bi_compact_remainder_locality.json",
+      "bytes": 18878,
+      "sha256": "04176A8D73758C1C7E8D0DCA7397D82A77F90959C7E8AF8E32B71A820B7D75FE"
+    },
+    {
+      "path": "outputs/c5x-reproducibility-rerun/c5x_exact_finite_claim_certificates.json",
+      "bytes": 2760,
+      "sha256": "0266FBCC3701D3E4A9C8E54953AE503F18787CE96A391992E9BA59051313FECA"
+    },
+    {
+      "path": "papers/c5x-literature-audit-plan.md",
+      "bytes": 8732,
+      "sha256": "FA520F3092BCC5FE2ACA38AD8D2D8B438203421F282FACB1DC01354B8DAC9A9B"
+    },
+    {
+      "path": "papers/c5x-preliminary-manuscript.md",
+      "bytes": 61755,
+      "sha256": "982A08538CA3C83F90C67A302DD1DFBE40C97E8553D4C6AE37A5CBC2439FBEE7"
+    },
+    {
+      "path": "papers/c5x-reproducibility-package.md",
+      "bytes": 6813,
+      "sha256": "401D2859A968E382077A7ED5C8FD6E40E1C8ED01B9F145AB354AE59211AA7B29"
+    },
+    {
+      "path": "papers/c5x-verification-control-protocol.md",
+      "bytes": 6025,
+      "sha256": "F61D862194D339A8747C680B5C87DC04989BC948274242CFB25A313BD6C6A35F"
+    }
+  ]
+}

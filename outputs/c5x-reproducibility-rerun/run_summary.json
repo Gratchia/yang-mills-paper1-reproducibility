@@ -1,0 +1,12 @@
+﻿{
+    "schema":  "c5x-reproducibility-run-v2",
+    "completed_utc":  "2026-08-06T18:24:07.2778423Z",
+    "include_downstream":  true,
+    "exact_certificate_pass":  true,
+    "c5ax_expected_obstruction_split":  true,
+    "c5ay_shifted_core_repair_pass":  true,
+    "c5az_rooted_recomputation_pass":  true,
+    "previous_shifted_core_constants_preserved":  false,
+    "c5bj_executed":  false,
+    "project_advanced":  false
+}

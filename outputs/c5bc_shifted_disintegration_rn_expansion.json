@@ -1,0 +1,139 @@
+{
+  "checkpoint": "C5BC",
+  "title": "shifted disintegration / Radon-Nikodym expansion diagnostic",
+  "shifted_path_cyclic_shift": 1,
+  "chart_report": {
+    "samples": 4,
+    "seed": 20260705,
+    "g_probe": 0.01,
+    "retained_radius": 0.2,
+    "gaussian_scale": 0.18,
+    "jac_step": 1e-06,
+    "retained_rank": 17,
+    "positive_high_rank": 119,
+    "gauge_vertex_rank": 80,
+    "shifted_path_cyclic_shift": 1,
+    "max_g_link_norm": 0.002457026383328673,
+    "principal_log_margin": 3.1391356272064646,
+    "min_retained_jacobian_singular_value": 0.9991495037625688,
+    "max_retained_jacobian_singular_value": 1.0008468048149743,
+    "max_retained_jacobian_condition": 1.0016987458293418,
+    "max_abs_retained_logdet": 3.147514295828378e-05,
+    "max_tangent_reconstruction_residual": 2.8718981135947152e-15,
+    "chart_failures": 0,
+    "classification": "finite rooted chart sample pass: local IFT data are stable in sampled good-sector probes; uniform compact theorem still open"
+  },
+  "rn_report": {
+    "pairs": 2,
+    "seed": 20260706,
+    "g_probe": 0.01,
+    "retained_radius": 0.18,
+    "gaussian_scale": 0.12,
+    "jac_step": 1e-06,
+    "fp_step": 1e-06,
+    "max_abs_odd_y_coefficient": 0.0050086866502017935,
+    "max_abs_pair_even_mean": 0.13262271488545224,
+    "max_half_scale_odd_error": 2.1514739378947212e-07,
+    "max_abs_o_g_density_coeff": 2.346709451856387e-08,
+    "min_fp_singular_value": 0.9997693486699187,
+    "max_fp_condition": 12.002768208494631,
+    "max_tangent_gauge_divergence_norm": 2.2365934668428758e-14,
+    "reference_antithetic_centering_exact": true,
+    "exact_compact_conditional_centering_proved": false,
+    "classification": "finite shifted RN sample pass: O(g) density coefficient is small and the odd-y O(g^2) channel is antithetically centered in the reference measure; exact compact conditional centering remains open"
+  },
+  "rn_pair_rows": [
+    {
+      "retained_norm": 0.18,
+      "high_norm": 0.9083487680082116,
+      "link_norm": 0.9416915108143485,
+      "plus_combined_half_even": -0.1356103377193527,
+      "minus_combined_half_even": -0.12963509205155177,
+      "odd_y_coefficient": -0.002987622833900472,
+      "pair_even_mean": -0.13262271488545224,
+      "half_scale_odd_error": 3.953967341388531e-08,
+      "max_abs_o_g_density_coeff": 2.346709451856387e-08,
+      "min_fp_singular": 0.999775210259676,
+      "max_fp_condition": 12.002697886881943,
+      "max_tangent_gauge_divergence_norm": 2.2365934668428758e-14
+    },
+    {
+      "retained_norm": 0.18000000000000002,
+      "high_norm": 0.9596078816836131,
+      "link_norm": 0.9897851649566105,
+      "plus_combined_half_even": -0.12139149388393228,
+      "minus_combined_half_even": -0.13140886718433586,
+      "odd_y_coefficient": 0.0050086866502017935,
+      "pair_even_mean": -0.12640018053413407,
+      "half_scale_odd_error": 2.1514739378947212e-07,
+      "max_abs_o_g_density_coeff": 1.5892511778648346e-08,
+      "min_fp_singular": 0.9997693486699187,
+      "max_fp_condition": 12.002768208494631,
+      "max_tangent_gauge_divergence_norm": 2.0332107961934715e-14
+    }
+  ],
+  "reflection_reference": {
+    "reflection_orthogonality_error": 0.0,
+    "hessian_reflection_commutator": 0.0,
+    "high_reflection_leak": 5.5004546746363466e-15,
+    "positive_reflection_leak": 1.681337225630687e-14,
+    "gauge_reflection_leak": 1.8157730669353363e-14,
+    "covariance_reflection_commutator": 4.348005212820758e-15
+  },
+  "residual_gates": [
+    {
+      "name": "forbidden uncentered shifted odd density",
+      "model_term": "O(g_j^2 M_j^2)",
+      "unit_bound": 0.21480467679414722,
+      "partial_100j0": 186.47318860001602,
+      "tail_after_100j0": null,
+      "gate": "FAIL",
+      "meaning": "If exact centering fails, the odd channel creates a nonsummable O(g^2) drift."
+    },
+    {
+      "name": "allowed centered shifted odd second cumulant",
+      "model_term": "O(g_j^4 M_j^4)",
+      "unit_bound": 0.21480467679414722,
+      "partial_100j0": 0.45619655606640613,
+      "tail_after_100j0": 0.009606301607646323,
+      "gate": "PASS IF EXACTLY CENTERED",
+      "meaning": "After exact centering, the first surviving effect is a summable second cumulant."
+    }
+  ],
+  "theorem_debts": [
+    {
+      "label": "BC1 uniform rooted chart",
+      "finite_result": "sampled shifted \u2202K/\u2202k is invertible and principal-log margin is positive",
+      "missing_uniform_statement": "prove uniform invertibility over the full C5M good sector",
+      "failure_trigger": "minimum singular value approaches zero or log chart crosses the principal boundary"
+    },
+    {
+      "label": "BC2 exact RN expansion",
+      "finite_result": "finite \u00b1g coefficient extraction shows the expected O(g)/O(g^2) structure",
+      "missing_uniform_statement": "derive analytic compact SU(2) RN expansion with controlled R_ge3",
+      "failure_trigger": "uncontrolled Haar/FP/retained-coordinate terms appear at O(g) or O(g^2)"
+    },
+    {
+      "label": "BC3 exact odd centering",
+      "finite_result": "antithetic reference high measure centers the shifted odd-y coefficient",
+      "missing_uniform_statement": "prove the true shifted conditional reference remains centered after compact disintegration",
+      "failure_trigger": "a nonzero conditional mean creates the forbidden O(g_j^2 M_j^2) drift"
+    },
+    {
+      "label": "BC4 quasilocality and exceptions",
+      "finite_result": "finite block has controlled gauge/reflection and FP diagnostics",
+      "missing_uniform_statement": "prove quasilocal constants and summable chart/large-field/near-Cartan exceptional bounds",
+      "failure_trigger": "constants grow with scale or exceptional-sector probability is nonsummable"
+    }
+  ],
+  "decision": {
+    "shifted_chart_sample_pass": true,
+    "rn_o_g_density_sample_pass": true,
+    "reference_odd_centering_pass": true,
+    "exact_compact_rn_theorem_proved": false,
+    "no_forbidden_o2_drift_found_in_diagnostic": true,
+    "status": "partial pass: finite rooted chart/RN diagnostics pass, but exact compact conditional centering and uniform RN theorem remain open",
+    "next_checkpoint": "C5BD: analytic shifted RN coefficient formulas. Replace finite \u00b1g/finite-difference extraction by explicit g=0 source formulas for the shifted retained-coordinate, Haar, and FP terms.",
+    "reason": "C5BC builds the actual local compact-link map in rooted variables and finds no sampled forbidden O(g^2) drift.  The odd channel is centered by the antithetic reference measure, but this is not yet the exact compact conditional centering theorem."
+  }
+}

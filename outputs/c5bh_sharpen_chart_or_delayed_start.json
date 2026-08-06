@@ -1,0 +1,144 @@
+{
+  "checkpoint": "C5BH",
+  "title": "sharpen rooted chart constants or prove delayed-start UV margin",
+  "report": {
+    "tol": 1e-10,
+    "chunk_scalar": 64,
+    "eta_target": 0.5,
+    "q2_restarts": 48,
+    "q2_iterations": 24,
+    "retained_rank": 17,
+    "positive_high_rank": 119,
+    "gauge_vertex_rank": 80,
+    "adapted_q2_bound_built": true,
+    "adapted_margin_closes_at_current_j0": false,
+    "delayed_start_needed_after_q2_sharpening": true,
+    "q3_bound_sharpened": false,
+    "compact_chart_remainder_proved": false,
+    "compact_rge3_locality_proved": false,
+    "exceptional_sector_estimate_proved": false,
+    "classification": "partial pass with warning: Q2 constants are sharpened but the current J0 margin still does not close, so delayed-start compatibility must be used"
+  },
+  "q2_sharpening_report": {
+    "retained_dim": 51,
+    "high_dim": 357,
+    "combined_dim": 408,
+    "c5bg_uncancelled_q2_bound": 17.918555664004757,
+    "exact_q2_tensor_frobenius_bound": 18.049582948994058,
+    "exact_q2_gram_frobenius_map_bound": 4.278724951013491,
+    "alternating_operator_lower_proxy": 1.7209946322512766,
+    "gram_vs_uncancelled_factor": 0.23878737947661152,
+    "lower_proxy_vs_gram_factor": 0.4022213748148567,
+    "exact_path_cancellations_used": true,
+    "rigorous_q2_bound_used_for_decision": "exact_q2_gram_frobenius_map_bound"
+  },
+  "chart_margin_scenarios": [
+    {
+      "scenario": "C5BG uncancelled Q2/Q3 at current J0",
+      "q2_constant": 17.918555664004757,
+      "q3_constant": 28.004525478061602,
+      "j_start": 13082,
+      "delayed_start_factor": 1.0,
+      "g_start": 0.008743049306486908,
+      "m_start": 12.315238662087472,
+      "a_bound_start": 17.416377539785593,
+      "truncated_margin": 3.3778351223500622,
+      "eta_target": 0.5,
+      "margin_room_for_chart_remainder": -2.8778351223500622,
+      "closes_eta": false,
+      "interpretation": "baseline from C5BG; does not close at current J0"
+    },
+    {
+      "scenario": "C5BG uncancelled Q2/Q3 at delayed start",
+      "q2_constant": 17.918555664004757,
+      "q3_constant": 28.004525478061602,
+      "j_start": 593001,
+      "delayed_start_factor": 45.32953676807828,
+      "g_start": 0.001298590696512755,
+      "m_start": 14.583800904102034,
+      "a_bound_start": 20.624609029530102,
+      "truncated_margin": 0.49999968856358434,
+      "eta_target": 0.5,
+      "margin_room_for_chart_remainder": 3.1143641565645197e-07,
+      "closes_eta": true,
+      "interpretation": "old conservative route would close only after delayed UV start"
+    },
+    {
+      "scenario": "C5BH adapted Q2 plus old Q3 at current J0",
+      "q2_constant": 4.278724951013491,
+      "q3_constant": 28.004525478061602,
+      "j_start": 13082,
+      "delayed_start_factor": 1.0,
+      "g_start": 0.008743049306486908,
+      "m_start": 12.315238662087472,
+      "a_bound_start": 17.416377539785593,
+      "truncated_margin": 1.3008674431985199,
+      "eta_target": 0.5,
+      "margin_room_for_chart_remainder": -0.8008674431985199,
+      "closes_eta": false,
+      "interpretation": "C5BH adapted-bound decision scenario at the current UV start"
+    },
+    {
+      "scenario": "C5BH adapted Q2 plus old Q3 first closing start",
+      "q2_constant": 4.278724951013491,
+      "q3_constant": 28.004525478061602,
+      "j_start": 58443,
+      "delayed_start_factor": 4.467436171839168,
+      "g_start": 0.004136506865393546,
+      "m_start": 13.25191265277098,
+      "a_bound_start": 18.74103460093234,
+      "truncated_margin": 0.4999966117428365,
+      "eta_target": 0.5,
+      "margin_room_for_chart_remainder": 3.38825716350577e-06,
+      "closes_eta": true,
+      "interpretation": "first delayed UV start at which the adapted truncated bound closes"
+    }
+  ],
+  "remainder_locality_rows": [
+    {
+      "channel": "chart derivative remainder allowance",
+      "model_term": "C4 g_j^3 ||A||^3",
+      "unit_or_allowance": 0.0,
+      "partial_100j0": null,
+      "tail_after_100j0": null,
+      "status": "ALLOWANCE ONLY",
+      "meaning": "If the compact chart derivative remainder has this scale form, its local C4 must stay below this allowance at the current J0."
+    },
+    {
+      "channel": "forbidden unmatched O(g^2) local survivor",
+      "model_term": "O(g_j^2 M_j^2)",
+      "unit_or_allowance": 1.0,
+      "partial_100j0": 868.1058130718349,
+      "tail_after_100j0": null,
+      "status": "FAIL IF PRESENT",
+      "meaning": "Any unmatched O(g^2) local action/density survivor remains nonsummable."
+    },
+    {
+      "channel": "compact Taylor/RN R_ge3 per fixed local unit",
+      "model_term": "O(g_j^3 M_j^6)",
+      "unit_or_allowance": 1.0,
+      "partial_100j0": 88048.29553744814,
+      "tail_after_100j0": 31299.18005785302,
+      "status": "SUMMABLE PER FIXED UNIT",
+      "meaning": "A genuine third-order compact/RN remainder is summable for each fixed local constant, but C5BH does not prove the constant."
+    },
+    {
+      "channel": "fiber-parity higher correction per fixed local unit",
+      "model_term": "O(g_j^3 M_j^4)",
+      "unit_or_allowance": 1.0,
+      "partial_100j0": 490.16797711907,
+      "tail_after_100j0": 117.59620734006943,
+      "status": "SUMMABLE PER FIXED UNIT",
+      "meaning": "The same-fiber skew remains acceptable only with one extra g power."
+    }
+  ],
+  "decision": {
+    "q2_constants_sharpened": true,
+    "current_j0_truncated_chart_margin_closes": false,
+    "delayed_start_required_for_truncated_chart_margin": true,
+    "full_compact_chart_theorem_proved": false,
+    "status": "partial pass with warning: adapted Q2 constant is built but current J0 still does not close; delayed-start route must be proved compatible",
+    "next_checkpoint": "C5BI: compact chart-remainder and R_ge3 locality theorem contract",
+    "reason": "C5BH sharpens the C5BG Q2 constant by preserving exact path cancellations, but the truncated margin still fails at the current J0.  A compatible delayed start and the compact Taylor/RN remainder and exceptional-sector estimates therefore remain open."
+  }
+}

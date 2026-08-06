@@ -1,0 +1,202 @@
+{
+  "checkpoint": "C5BE",
+  "title": "compact conditional centering criterion and RN remainder contract",
+  "report": {
+    "seed": 20260705,
+    "samples": 2,
+    "g_values": [
+      0.01,
+      0.005
+    ],
+    "retained_radius": 0.18,
+    "gaussian_scale": 0.12,
+    "jac_step": 1e-06,
+    "newton_tolerance": 1e-10,
+    "newton_max_steps": 5,
+    "retained_rank": 17,
+    "positive_high_rank": 119,
+    "gauge_vertex_rank": 80,
+    "tangent_gaussian_centering_exact": true,
+    "exact_compact_centering_proved": false,
+    "fixed_fiber_involution_constructed_numerically": true,
+    "max_naive_retained_parity_defect": 0.0003436110749679152,
+    "max_fiber_solve_residual": 6.085137571162815e-11,
+    "max_k_shift_norm_over_g": 0.03436115378974752,
+    "max_abs_pair_mean": 1.983600264791538e-06,
+    "max_abs_pair_mean_over_g": 0.0001983600264791538,
+    "max_abs_pair_mean_over_g_retained_high": 0.001197028859950837,
+    "max_linear_halving_error": 1.0852066224809054e-09,
+    "max_k_shift_halving_error": 3.760797575918726e-09,
+    "compact_o1_odd_mean_detected": false,
+    "compact_o_g_fiber_skew_supported": true,
+    "centered_second_cumulant_unit_bound": 0.21480467679414722,
+    "fiber_skew_unit_proxy": 0.001197028859950837,
+    "forbidden_uncentered_partial_100j0": 186.47318860001135,
+    "centered_partial_100j0": 0.45619655606640896,
+    "centered_tail_after_100j0": 0.009606301607646323,
+    "fiber_skew_partial_100j0": 0.5867452148352402,
+    "fiber_skew_tail_after_100j0": 0.14076605400682557,
+    "uniform_r_ge3_contract_proved": false,
+    "classification": "partial pass: fixed-fiber reflected points are constructed in the finite rooted chart, the odd source pair mean scales as an O(g) fiber skew rather than an O(1) drift, and a summable O(g^3 M^4) contract is formulated; exact compact centering and uniform remainder estimates remain open"
+  },
+  "fiber_parity_rows": [
+    {
+      "sample": 1,
+      "g_probe": 0.01,
+      "retained_norm": 0.18000000000000002,
+      "high_norm": 0.9206128473390941,
+      "max_g_link_norm": 0.0013433399535549464,
+      "principal_log_margin": 3.140249313636238,
+      "naive_retained_parity_defect": 0.0003436110749679152,
+      "fiber_solve_residual": 1.0246811882524394e-16,
+      "newton_steps": 3,
+      "k_shift_norm": 0.0003436115378974752,
+      "k_shift_norm_over_g": 0.03436115378974752,
+      "source_plus": -0.005150831190310963,
+      "source_fiber_minus": 0.005154798390840546,
+      "fiber_pair_mean": 1.983600264791538e-06,
+      "abs_pair_mean_over_g": 0.0001983600264791538,
+      "abs_pair_mean_over_g_retained_high": 0.001197028859950837
+    },
+    {
+      "sample": 1,
+      "g_probe": 0.005,
+      "retained_norm": 0.18000000000000002,
+      "high_norm": 0.9206128473390941,
+      "max_g_link_norm": 0.0006716699767774732,
+      "principal_log_margin": 3.140920983613016,
+      "naive_retained_parity_defect": 0.00017180562467230783,
+      "fiber_solve_residual": 1.7236752670439925e-11,
+      "newton_steps": 2,
+      "k_shift_norm": 0.00017180573120391282,
+      "k_shift_norm_over_g": 0.03436114624078256,
+      "source_plus": -0.005150831190310963,
+      "source_fiber_minus": 0.005152813705369132,
+      "fiber_pair_mean": 9.912575290845285e-07,
+      "abs_pair_mean_over_g": 0.0001982515058169057,
+      "abs_pair_mean_over_g_retained_high": 0.0011963739781839927
+    },
+    {
+      "sample": 2,
+      "g_probe": 0.01,
+      "retained_norm": 0.17999999999999997,
+      "high_norm": 0.908329848984942,
+      "max_g_link_norm": 0.001465720440479923,
+      "principal_log_margin": 3.1401269331493133,
+      "naive_retained_parity_defect": 0.00026455816877824173,
+      "fiber_solve_residual": 6.085137571162815e-11,
+      "newton_steps": 2,
+      "k_shift_norm": 0.0002645501516048223,
+      "k_shift_norm_over_g": 0.02645501516048223,
+      "source_plus": 0.0020289827826720196,
+      "source_fiber_minus": -0.002027835967950654,
+      "fiber_pair_mean": 5.734073606827525e-07,
+      "abs_pair_mean_over_g": 5.734073606827525e-05,
+      "abs_pair_mean_over_g_retained_high": 0.0003507092111744887
+    },
+    {
+      "sample": 2,
+      "g_probe": 0.005,
+      "retained_norm": 0.17999999999999997,
+      "high_norm": 0.908329848984942,
+      "max_g_link_norm": 0.0007328602202399615,
+      "principal_log_margin": 3.140859793369553,
+      "naive_retained_parity_defect": 0.0001322789760951424,
+      "fiber_solve_residual": 7.606869576714582e-12,
+      "newton_steps": 2,
+      "k_shift_norm": 0.0001322769562011991,
+      "k_shift_norm_over_g": 0.02645539124023982,
+      "source_plus": 0.0020289827826720196,
+      "source_fiber_minus": -0.0020284093804632092,
+      "fiber_pair_mean": 2.867011044051671e-07,
+      "abs_pair_mean_over_g": 5.7340220881033424e-05,
+      "abs_pair_mean_over_g_retained_high": 0.00035070606017009677
+    }
+  ],
+  "scaling_rows": [
+    {
+      "sample": 1,
+      "g_large": 0.01,
+      "g_small": 0.005,
+      "pair_mean_large": 1.983600264791538e-06,
+      "pair_mean_small": 9.912575290845285e-07,
+      "linear_halving_error": 1.0852066224809054e-09,
+      "k_shift_large": 0.0003436115378974752,
+      "k_shift_small": 0.00017180573120391282,
+      "k_shift_halving_error": 7.548964957911769e-11
+    },
+    {
+      "sample": 2,
+      "g_large": 0.01,
+      "g_small": 0.005,
+      "pair_mean_large": 5.734073606827525e-07,
+      "pair_mean_small": 2.867011044051671e-07,
+      "linear_halving_error": 5.1518724182575415e-12,
+      "k_shift_large": 0.0002645501516048223,
+      "k_shift_small": 0.0001322769562011991,
+      "k_shift_halving_error": 3.760797575918726e-09
+    }
+  ],
+  "remainder_contract_rows": [
+    {
+      "channel": "forbidden uncentered odd mean",
+      "model_term": "O(g_j^2 M_j^2)",
+      "unit_bound": 0.21480467679414722,
+      "partial_100j0": 186.47318860001135,
+      "tail_after_100j0": null,
+      "status": "FAIL IF PRESENT",
+      "meaning": "An O(1) compact conditional odd mean creates a nonsummable O(g^2) drift."
+    },
+    {
+      "channel": "centered odd second cumulant",
+      "model_term": "O(g_j^4 M_j^4)",
+      "unit_bound": 0.21480467679414722,
+      "partial_100j0": 0.45619655606640896,
+      "tail_after_100j0": 0.009606301607646323,
+      "status": "SUMMABLE",
+      "meaning": "If the leading odd mean is centered, the second cumulant remains summable."
+    },
+    {
+      "channel": "compact fiber-skew correction",
+      "model_term": "O(g_j^3 M_j^4)",
+      "unit_bound": 0.001197028859950837,
+      "partial_100j0": 0.5867452148352402,
+      "tail_after_100j0": 0.14076605400682557,
+      "status": "SUMMABLE IF UNIFORMLY BOUNDED",
+      "meaning": "A fixed-fiber parity skew of size O(g) is allowed only with a uniform good-sector bound."
+    }
+  ],
+  "criterion_clauses": [
+    {
+      "label": "BE1 fixed-fiber involution",
+      "required_statement": "For each good-sector shifted fiber point (K,H), solve K_g(K+Delta_g,-H)=K_g(K,H) with Delta_g=O(g).",
+      "finite_diagnostic_evidence": "Newton solves construct the reflected same-fiber point and measure Delta_g/g.",
+      "theorem_gap": "prove existence, uniqueness, locality, and uniform bounds over the full C5M good sector",
+      "failure_trigger": "fiber solve loses invertibility or Delta_g has an O(1) component"
+    },
+    {
+      "label": "BE2 no O(1) compact odd mean",
+      "required_statement": "The paired odd source B(K,H)+B(K+Delta_g,-H) must be O(g), not O(1).",
+      "finite_diagnostic_evidence": "pair mean is compared at g and g/2 for linear-in-g scaling",
+      "theorem_gap": "turn the scaling diagnostic into a deterministic parity expansion",
+      "failure_trigger": "pair mean remains O(1) as g -> 0"
+    },
+    {
+      "label": "BE3 RN remainder contract",
+      "required_statement": "After C5BD X1/X2 slots are removed, the fiber-skew and R_ge3 terms must be at least O(g^3 M^4) or otherwise summable.",
+      "finite_diagnostic_evidence": "C5BE records the O(g^3 M^4) summability budget",
+      "theorem_gap": "derive uniform compact-link Taylor remainder constants and exceptional-sector bounds",
+      "failure_trigger": "R_ge3 contains an unmatched O(g^2) local term or nonsummable exceptional sector"
+    }
+  ],
+  "decision": {
+    "fixed_fiber_centering_criterion_formulated": true,
+    "no_o1_compact_odd_mean_seen": true,
+    "o_g_fiber_skew_contract_formulated": true,
+    "exact_compact_centering_theorem_proved": false,
+    "uniform_good_sector_remainder_proved": false,
+    "status": "partial pass: C5BE formulates the compact fixed-fiber centering criterion and finds no finite diagnostic O(1) odd mean; the observed compact fiber skew is assigned to a summable O(g^3 M^4) contract, but the exact compact theorem is still open",
+    "next_checkpoint": "C5BF: deterministic compact fiber-parity bound and local RN R_ge3 envelope",
+    "reason": "The exact centering target is now sharpened: an O(1) compact odd mean is forbidden, while an O(g) same-fiber skew is acceptable only if a uniform good-sector bound is proved."
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "checkpoint": "C5BG",
+  "title": "uniform rooted chart-margin and compact Taylor R_ge3 proof contract",
+  "report": {
+    "seed": 20260708,
+    "samples": 3,
+    "g_values": [
+      0.01,
+      0.005
+    ],
+    "retained_radius": 0.18,
+    "gaussian_scale": 0.12,
+    "retained_rank": 17,
+    "positive_high_rank": 119,
+    "gauge_vertex_rank": 80,
+    "q2_chart_tensor_built": true,
+    "q3_chart_tensor_bound_built": true,
+    "truncated_chart_margin_passes_at_j0": false,
+    "full_compact_chart_margin_proved": false,
+    "max_actual_jacobian_margin": 0.0027111472768573553,
+    "max_q2_prediction_error": 4.470789186448304e-07,
+    "max_actual_over_bound": 0.015585382115102285,
+    "r_ge3_contract_formulated": true,
+    "compact_taylor_remainder_proved": false,
+    "exceptional_sector_estimate_proved": false,
+    "classification": "partial pass: Q2/Q3 deterministic chart-margin constants and per-unit R_ge3 summability contracts are explicit; the current J0 margin closes for the truncated bound only if indicated below, and the full compact Taylor/exceptions theorem remains open"
+  },
+  "chart_tensor_bounds": {
+    "retained_dim": 51,
+    "high_dim": 357,
+    "combined_dim": 408,
+    "q2_dk_frobenius_operator_bound": 17.918555664004757,
+    "q3_dk_frobenius_operator_bound": 28.004525478061602,
+    "eta_target": 0.5,
+    "j0": 13082,
+    "g_j0": 0.008743049306486908,
+    "m_j0": 12.315238662087472,
+    "combined_a_bound_at_j0": 17.416377539785593,
+    "truncated_margin_bound_at_j0": 3.3778351223500622,
+    "truncated_margin_passes_at_j0": false,
+    "first_j_meeting_eta": 593001,
+    "delayed_start_factor": 45.32953676807828
+  },
+  "chart_validation_rows": [
+    {
+      "sample": 1,
+      "g_probe": 0.01,
+      "retained_norm": 0.17999999999999997,
+      "high_norm": 0.9138137874826485,
+      "actual_jacobian_margin": 0.0020020035786888464,
+      "q2_predicted_margin": 0.0020020973382967877,
+      "truncated_bound": 0.16931785520554554,
+      "actual_over_bound": 0.011823936561554532,
+      "q2_prediction_error": 9.375960794127253e-08
+    },
+    {
+      "sample": 1,
+      "g_probe": 0.005,
+      "retained_norm": 0.17999999999999997,
+      "high_norm": 0.9138137874826485,
+      "actual_jacobian_margin": 0.0010010250341884503,
+      "q2_predicted_margin": 0.0010010486691483939,
+      "truncated_bound": 0.0840516105147509,
+      "actual_over_bound": 0.011909647275738665,
+      "q2_prediction_error": 2.3634959943601846e-08
+    },
+    {
+      "sample": 2,
+      "g_probe": 0.01,
+      "retained_norm": 0.17999999999999997,
+      "high_norm": 0.9466694788483442,
+      "actual_jacobian_margin": 0.0027111472768573553,
+      "q2_predicted_margin": 0.002711594355776,
+      "truncated_bound": 0.17526906110234766,
+      "actual_over_bound": 0.01546848747751431,
+      "q2_prediction_error": 4.470789186448304e-07
+    },
+    {
+      "sample": 2,
+      "g_probe": 0.005,
+      "retained_norm": 0.17999999999999997,
+      "high_norm": 0.9466694788483442,
+      "actual_jacobian_margin": 0.0013556853820319988,
+      "q2_predicted_margin": 0.001355797177888,
+      "truncated_bound": 0.0869844173225843,
+      "actual_over_bound": 0.015585382115102285,
+      "q2_prediction_error": 1.117958560012313e-07
+    },
+    {
+      "sample": 3,
+      "g_probe": 0.01,
+      "retained_norm": 0.18,
+      "high_norm": 0.9196657128299807,
+      "actual_jacobian_margin": 0.002440515012483323,
+      "q2_predicted_margin": 0.00244053223034736,
+      "truncated_bound": 0.1703768362117132,
+      "actual_over_bound": 0.014324218401676955,
+      "q2_prediction_error": 1.7217864037299968e-08
+    },
+    {
+      "sample": 3,
+      "g_probe": 0.005,
+      "retained_norm": 0.18,
+      "high_norm": 0.9196657128299807,
+      "actual_jacobian_margin": 0.0012202619156359304,
+      "q2_predicted_margin": 0.00122026611517368,
+      "truncated_bound": 0.08457358923433163,
+      "actual_over_bound": 0.014428404028767172,
+      "q2_prediction_error": 4.199537749667581e-09
+    }
+  ],
+  "rge3_contract_rows": [
+    {
+      "channel": "forbidden unmatched O(g^2) local survivor",
+      "model_term": "O(g_j^2 M_j^p)",
+      "unit_bound": 1.0,
+      "partial_100j0": 868.1058130718349,
+      "tail_after_100j0": null,
+      "status": "FAIL IF PRESENT",
+      "meaning": "Any unmatched O(g^2) local density/action term is nonsummable and forces redesign."
+    },
+    {
+      "channel": "compact Taylor R_ge3 per-unit contract",
+      "model_term": "O(g_j^3 M_j^6)",
+      "unit_bound": 1.0,
+      "partial_100j0": 88048.29553744814,
+      "tail_after_100j0": 31299.18005785302,
+      "status": "SUMMABLE PER UNIT",
+      "meaning": "A genuine third-order compact remainder is summable for each fixed local constant."
+    },
+    {
+      "channel": "fiber-parity higher correction per-unit contract",
+      "model_term": "O(g_j^3 M_j^4)",
+      "unit_bound": 1.0,
+      "partial_100j0": 490.16797711907,
+      "tail_after_100j0": 117.59620734006943,
+      "status": "SUMMABLE PER UNIT",
+      "meaning": "Higher same-fiber skew is allowed only if it gains one extra g power."
+    }
+  ],
+  "decision": {
+    "truncated_chart_margin_bound_available": true,
+    "current_j0_margin_closes_with_truncated_bound": false,
+    "r_ge3_contract_formulated": true,
+    "full_uniform_compact_theorem_proved": false,
+    "status": "partial pass with warning: truncated Q2/Q3 chart-margin bound is explicit but too crude to close at the current J0; either constants must be sharpened or the UV start must be delayed, and full compact R_ge3/exceptions remain open",
+    "next_checkpoint": "C5BH: sharpen rooted chart constants or prove delayed-start UV margin plus compact R_ge3 locality",
+    "reason": "C5BG converts the chart-margin assumption into explicit Q2/Q3 constants and a summability contract; the remaining question is whether the constants close uniformly without hiding exceptional or compact-log failures."
+  }
+}

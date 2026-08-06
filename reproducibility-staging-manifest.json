@@ -1,0 +1,302 @@
+{
+  "schema": "c5x-github-ready-repro-staging-v1",
+  "refreshed_utc": "2026-08-06T18:24:27.843722+00:00",
+  "external_push_performed": false,
+  "journal_submission_performed": false,
+  "license": "MIT",
+  "public_scope": "paper-core checks plus optional downstream C5BA-C5BI correction-chain checks",
+  "files": {
+    ".gitignore": {
+      "bytes": 46,
+      "sha256": "ac30659d133aa2122f4edf036df41ed9a4f8114798d25c53c9e672e98c1651b0"
+    },
+    "calculations\\c5ad_cubic_coordinate_normalization.py": {
+      "bytes": 7944,
+      "sha256": "da15e7e6750157ca2672c18b21d15602f8a52e7b76e89a22cd4550bb99537585"
+    },
+    "calculations\\c5ae_jacobian_half_density.py": {
+      "bytes": 12111,
+      "sha256": "61af3db793d24cdfa7f7ac3d8f3d88b963d6f0ea94098eab3aab1bc6a89c84f8"
+    },
+    "calculations\\c5af_density_output_classification.py": {
+      "bytes": 8504,
+      "sha256": "554ba1e5edf9c326f048303b00501fa2f42fe3dc594a4d33aa10272bfe0bf4a5"
+    },
+    "calculations\\c5ak_local_holonomy_disintegration.py": {
+      "bytes": 15014,
+      "sha256": "9a6d11e5afc2a2adea1e7780cb4ce2cd324ee9f418231347323ec06af78ab322"
+    },
+    "calculations\\c5al_gauge_zero_reference.py": {
+      "bytes": 12890,
+      "sha256": "4341368906b270ee7e40dd9fead58e0336ad5ad4dc0c52524fb19e5461553b79"
+    },
+    "calculations\\c5am_nonlinear_gauge_haar.py": {
+      "bytes": 18095,
+      "sha256": "879bf9c2871c9aefffda922514efa8964f98db114c6276f3c389fd32139cb427"
+    },
+    "calculations\\c5an_gauge_haar_half_density_matching.py": {
+      "bytes": 18299,
+      "sha256": "3acf1b7f501ec8df9e4e1f5a76b055acaaa435bf5df1de61275538dca8fce7cd"
+    },
+    "calculations\\c5ao_conditional_half_density_projection.py": {
+      "bytes": 16073,
+      "sha256": "7e735b0fe97c5c33a2333a47be082c9a88ef84adbb313338b3d454a1f9a9c938"
+    },
+    "calculations\\c5aq_centered_density_coefficient_envelope.py": {
+      "bytes": 17852,
+      "sha256": "656c624c23afe5b719faaa58b8364a92dd7904f821b00497f9954fd19e0eb5ff"
+    },
+    "calculations\\c5au_retained_fp_source_formula.py": {
+      "bytes": 16388,
+      "sha256": "91f725f5c0c5aff3c2fe36398215c4ad60130d58d5ab5a3f86f0c005a72807df"
+    },
+    "calculations\\c5av_density_degree_odd_bound.py": {
+      "bytes": 16620,
+      "sha256": "8cec1fa1933cbb23471b0b86f813d1e698a83f4793b37125a95c365afbf87145"
+    },
+    "calculations\\c5aw_odd_bilinear_envelope.py": {
+      "bytes": 27309,
+      "sha256": "14cb892c8f7b574245ece062c3d55ee3163206d21adc67cb798e4634fcb9e33e"
+    },
+    "calculations\\c5ax_reflection_retained_density.py": {
+      "bytes": 18079,
+      "sha256": "d05ea7ba3b06177d157b5e9d4926568b4e07af15d2efa9f2083ad31cbbe2334c"
+    },
+    "calculations\\c5ay_reflection_covariant_retained_coordinates.py": {
+      "bytes": 18389,
+      "sha256": "7199a62cee389e6ac65da36a51a69e13dcfcd3ad14c9fb1e739544403fde7614"
+    },
+    "calculations\\c5az_shifted_coordinate_package_regression.py": {
+      "bytes": 22669,
+      "sha256": "bcf52bae6de4ba50b9b4fa10e3258da1aebac4d8c4382d052a3e5f1438778e87"
+    },
+    "calculations\\c5ba_shifted_normalized_shell_contract.py": {
+      "bytes": 16654,
+      "sha256": "ac51b5de5b865dee75bdf587b7df7e4cafda5098d63093c8f122492c098455a2"
+    },
+    "calculations\\c5bb_shifted_good_sector_expansion.py": {
+      "bytes": 20876,
+      "sha256": "173a5dde98352e49b2b8b6f54c31e4dbaaae227162ee75ecfb36689baf61f57e"
+    },
+    "calculations\\c5bc_shifted_disintegration_rn_expansion.py": {
+      "bytes": 22295,
+      "sha256": "5005a674904bf10c50d8b2d6c2c97d36c55a72138b5b9325dbbbdb420b9ed7e2"
+    },
+    "calculations\\c5bd_analytic_shifted_rn_coefficients.py": {
+      "bytes": 22965,
+      "sha256": "a17c86cd55d22642a37b4bce7c3e9602e3e0c1a34740523c5c6d54eb3747fbe4"
+    },
+    "calculations\\c5be_compact_conditional_centering.py": {
+      "bytes": 18571,
+      "sha256": "c9108a420f925fb970bbc9def62d98c9792a308bf5e5a9eba49adea2e24022d1"
+    },
+    "calculations\\c5bf_deterministic_fiber_parity_bound.py": {
+      "bytes": 14936,
+      "sha256": "5f7fd89035c4d3cae14791a905c3eace34edb9f97ddfe1940d3adef9c7d0404c"
+    },
+    "calculations\\c5bg_uniform_chart_margin_rge3.py": {
+      "bytes": 15970,
+      "sha256": "5a3940fea8ad76cab3d3cabf386b89b8cf18a1d2ec28a3f3d2d07035688ea9ca"
+    },
+    "calculations\\c5bh_sharpen_chart_or_delayed_start.py": {
+      "bytes": 17362,
+      "sha256": "ffb4775b17c82017ce063fda6c863e93c768f84975b62c557feefac06479e103"
+    },
+    "calculations\\c5bi_compact_remainder_locality.py": {
+      "bytes": 22774,
+      "sha256": "9b969245e74edad5e9500b2ff85d01256db0c57734dc9880059bde47505895df"
+    },
+    "calculations\\c5q_4d_cubical_incidence.py": {
+      "bytes": 9269,
+      "sha256": "b9292870c74d86369b76f4a24ca524643b0d46ec80dff35aeb76bd693d64eae4"
+    },
+    "calculations\\c5r_curvature_tile_schur.py": {
+      "bytes": 5633,
+      "sha256": "1d76c1e54a043fcf3ca97dc76cdc0cace7ac27b7fc7ce97fcaa93e4063a4deb0"
+    },
+    "calculations\\c5t_bch_incidence_expansion.py": {
+      "bytes": 10422,
+      "sha256": "5316352a0919ffebf2b2a6362474f324307298d5394ef06f997fd7fed709f396"
+    },
+    "calculations\\c5v_retained_quotient_bch_bounds.py": {
+      "bytes": 16312,
+      "sha256": "333f6fbd84e5ce7f6aece6d9cb7f9aaf630d3f8ce6bfd7dad6d6f36fc670dd86"
+    },
+    "calculations\\c5w_cubic_centering.py": {
+      "bytes": 8990,
+      "sha256": "b14fca6548a43014d3c88ffc97afdeca9f30429f7301dcc6f9c85253de15d6e0"
+    },
+    "calculations\\c5x_exact_finite_claim_certificates.py": {
+      "bytes": 8758,
+      "sha256": "78a22631312144c7b8751bfb48c819710dae0df927e33e31f964e8647ddda7bc"
+    },
+    "calculations\\c5x_reproducibility_manifest.py": {
+      "bytes": 3921,
+      "sha256": "65ed1ff56eb114ef71375e1e0bfeead2a93f40dec9d233efd9c81e9bcdaaf7fc"
+    },
+    "calculations\\run_c5x_paper_reproducibility.ps1": {
+      "bytes": 8373,
+      "sha256": "a7a7a7eda261587264ed7385efe386a823394f19639dfac5a24e86adc788c77c"
+    },
+    "LICENSE": {
+      "bytes": 1096,
+      "sha256": "097c4389449ce31560e56083b2d295c9820076f6d60c386ac586b1ac2fa168dd"
+    },
+    "outputs\\c5ba_shifted_normalized_shell_contract.json": {
+      "bytes": 10058,
+      "sha256": "c8a88928dd3b5ad3e82cf30aa91c1dc1ccb0e0a7b05ac1e0ec827391b566d0e3"
+    },
+    "outputs\\c5bb_shifted_good_sector_expansion.json": {
+      "bytes": 11785,
+      "sha256": "51a952ab5ed5d64aa8189df8adc0906b808b31551c08cf94edec12729f613201"
+    },
+    "outputs\\c5bc_shifted_disintegration_rn_expansion.json": {
+      "bytes": 6733,
+      "sha256": "13cbcead34e1deaeb7440e4fb9fe16a64e8cf7330e020beea999ce84c48c7b87"
+    },
+    "outputs\\c5bd_analytic_shifted_rn_coefficients.json": {
+      "bytes": 8446,
+      "sha256": "99a8cbfce3e6ea54c63bad8b7934d7435d64c83888a73b6de3e1bcf91ba41225"
+    },
+    "outputs\\c5be_compact_conditional_centering.json": {
+      "bytes": 9208,
+      "sha256": "c4ccfc0730a4f39e1f7ae47dec477920b970599d9e92c5640c228b3a10bd66ee"
+    },
+    "outputs\\c5bf_deterministic_fiber_parity_bound.json": {
+      "bytes": 6089,
+      "sha256": "4aa8e7717ff2eaf917de476cb6ffb2bd1eecfd5ed16eddf58e37c10bd2002c28"
+    },
+    "outputs\\c5bg_uniform_chart_margin_rge3.json": {
+      "bytes": 6064,
+      "sha256": "492d7c4170dc6d0189341f76ed15d294b651d42ce69c9749c72aa782be1f0022"
+    },
+    "outputs\\c5bh_sharpen_chart_or_delayed_start.json": {
+      "bytes": 6191,
+      "sha256": "b297a4b720ee7addc9b102169feedbdb43e78fe59e6ab852c6b64431cf3ffd44"
+    },
+    "outputs\\c5bi_compact_remainder_locality.json": {
+      "bytes": 9436,
+      "sha256": "2f1348196ce1fc62d953b3f8bc39b9fb1c5573b3aa3d013e32b3322671a48a9a"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5ax_reflection_retained_density.md": {
+      "bytes": 5480,
+      "sha256": "fcb5c0c20de14e55456121b4d246bed6c908c8f9fafa81fd9365590bfc24989d"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5ay_reflection_covariant_retained_coordinates.md": {
+      "bytes": 6488,
+      "sha256": "8510f0fcdf2dd11dbfac7bae1c0734c442716be7cfddf7813938994acca4dbc0"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5az_shifted_coordinate_package_regression.md": {
+      "bytes": 5168,
+      "sha256": "c5ada52406a01d4d3d7bde9df53028c1d76accb6ee2cd0c656b97cdc517ec0a6"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5ba_shifted_normalized_shell_contract.json": {
+      "bytes": 20122,
+      "sha256": "9b63d08ed42cfbbdc31a41f40701f178d9204023b6963afdd25b140bfcc55f3e"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bb_shifted_good_sector_expansion.json": {
+      "bytes": 23576,
+      "sha256": "add3c8a4faa8f543ab959eaf814fee049370aa029387d988e416819636b8ba1f"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bc_shifted_disintegration_rn_expansion.json": {
+      "bytes": 13472,
+      "sha256": "ce803f05ee35d086c96a381b9bd4e88a275d71d1d8cb3de58b40cddc2796bd85"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bd_analytic_shifted_rn_coefficients.json": {
+      "bytes": 16898,
+      "sha256": "d0f499725e6c3e7ff2471618c260475eadfc5347aab3db96ec8f45188ced6769"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5be_compact_conditional_centering.json": {
+      "bytes": 18422,
+      "sha256": "cedabf6ce32f0915141a8335059bf6311ba50d61f5b37ac1424dd4946fae8cb9"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bf_deterministic_fiber_parity_bound.json": {
+      "bytes": 12184,
+      "sha256": "57eb7d6ac6aa8d8a50a13f2b75db4e5e4640b5829692c9c1bd2d3ba929568552"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bg_uniform_chart_margin_rge3.json": {
+      "bytes": 12134,
+      "sha256": "a7792c1832c69ec53ecc86ec01954ad5b13e1b3d2728ac6a6391e6968c6c129e"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bh_sharpen_chart_or_delayed_start.json": {
+      "bytes": 12388,
+      "sha256": "0cc4882f0a116703d18d12b49f3cea1502eea0257843d8bafb2938eb76e3a0b9"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5bi_compact_remainder_locality.json": {
+      "bytes": 18878,
+      "sha256": "04176a8d73758c1c7e8d0dca7397d82a77f90959c7e8af8e32b71a820b7d75fe"
+    },
+    "outputs\\c5x-reproducibility-rerun\\c5x_exact_finite_claim_certificates.json": {
+      "bytes": 2760,
+      "sha256": "0266fbcc3701d3e4a9c8e54953ae503f18787ce96a391992e9ba59051313feca"
+    },
+    "outputs\\c5x-reproducibility-rerun\\manifest.json": {
+      "bytes": 11089,
+      "sha256": "06701c881eb472d15dbd4b0a734e8286453161628a125e4a98ee3f5cf056dc00"
+    },
+    "outputs\\c5x-reproducibility-rerun\\manifest_build.log": {
+      "bytes": 22184,
+      "sha256": "f68649e0d578c03d50d22440c5c6908c3c4c1c1b9037df0367eaf8448f7ecbe0"
+    },
+    "outputs\\c5x-reproducibility-rerun\\run_summary.json": {
+      "bytes": 440,
+      "sha256": "9844bb88d081b19fa7ebb1d98539731a2075af71796d2bf22137ff470436e7f6"
+    },
+    "outputs\\c5x-reproducibility-rerun\\sha256_manifest.txt": {
+      "bytes": 6006,
+      "sha256": "b133038406aa23eb33ec282ab205d0babd4bdfd4d98b05a4d05d4e3cd165d3e7"
+    },
+    "outputs\\c5x_exact_finite_claim_certificates.json": {
+      "bytes": 1377,
+      "sha256": "1dc3d70507141b3ef8a506c10c47b4bd4de4773d56c06f454cea6ed9d8cd8236"
+    },
+    "papers\\c5x-literature-audit-plan.md": {
+      "bytes": 8732,
+      "sha256": "fa520f3092bcc5fe2aca38ad8d2d8b438203421f282facb1dc01354b8dac9a9b"
+    },
+    "papers\\c5x-preliminary-manuscript.md": {
+      "bytes": 61755,
+      "sha256": "982a08538ca3c83f90c67a302dd1dfbe40c97e8553d4c6ae37a5cbc2439fbee7"
+    },
+    "papers\\c5x-reproducibility-package.md": {
+      "bytes": 6813,
+      "sha256": "401d2859a968e382077a7ed5c8fd6e40e1c8ed01b9f145ab354ae59211aa7b29"
+    },
+    "papers\\c5x-verification-control-protocol.md": {
+      "bytes": 6025,
+      "sha256": "f61d862194d339a8747c680b5c87dc04989bc948274242cfb25a313bd6c6a35f"
+    },
+    "papers\\submission\\c5x-scipost-core-candidate-2026-08-06\\author-confirmation-required.md": {
+      "bytes": 2254,
+      "sha256": "29e465d10796726908f6352ebe2da4a88aa2f6e4163b40c3d09a66aae55f6078"
+    },
+    "papers\\submission\\c5x-scipost-core-candidate-2026-08-06\\c5x-manuscript-scipost-candidate.md": {
+      "bytes": 62461,
+      "sha256": "f245a32067cdc3864643c12194f2e9cd1c8b58f36549dabaedfec720fe2d4ae4"
+    },
+    "papers\\submission\\c5x-scipost-core-candidate-2026-08-06\\c5x-manuscript-scipost-candidate.tex": {
+      "bytes": 69661,
+      "sha256": "10a6ca17ba4ed963d8f4e864f039c03aada9971512adc69da6f984e8011064f4"
+    },
+    "papers\\submission\\c5x-scipost-core-candidate-2026-08-06\\c5x-references-scipost-candidate.bib": {
+      "bytes": 4244,
+      "sha256": "024b24db2cf1fd97fc738ccc8b89301ccc87dab5cf3922baccbfd7319e04b64a"
+    },
+    "papers\\submission\\c5x-scipost-core-candidate-2026-08-06\\submission-readiness-audit.md": {
+      "bytes": 5184,
+      "sha256": "8241d31a798d9ba124428dff7597898b2f22fbd97f249e94e368461e91223657"
+    },
+    "README.md": {
+      "bytes": 1631,
+      "sha256": "aeea533539e8f182700d2ef52e782e2a4e1b8cf85d03fefd957e67d8f3cd1ab5"
+    },
+    "requirements.txt": {
+      "bytes": 14,
+      "sha256": "b278f1339f69781eefd2f8fc58f11e4c07a5fbd9134324562c8c0f65599b34c5"
+    },
+    "SUBMISSION-NOTE.md": {
+      "bytes": 318,
+      "sha256": "202e71ce4f070803caacb58f3eaa9771e5984a7fe2ba16ed90ae242a625810bd"
+    }
+  }
+}

@@ -1,0 +1,1299 @@
+# A finite-block reflection obstruction and common-stem repair for based holonomy-log coordinates in \(SU(2)\) lattice Yang--Mills
+
+<!-- ASSERT_CONVENTION: metric_signature=Euclidean (++++), fourier_convention=physics, natural_units=natural, gauge_choice=Feynman gauge, coordinate_system=Cartesian R4, generator_normalization=T_a=-i sigma_a/2 -->
+
+## Abstract
+
+We isolate a finite-block coordinate obstruction for based holonomy-log variables in \(SU(2)\) lattice Yang--Mills theory.  The block is the \(n=2\) four-dimensional curvature-tile block with 24 oriented coarse face loops and a 17-dimensional Bianchi-compatible retained curvature space.  Time reflection preserves this retained space at the tangent level.  For the original based holonomy logs, however, reflection sends the 12 time-containing loops to inverse loops with a six-segment cyclic rebase.  The induced partial-transport conjugation is invisible to Wilson traces but visible to based Lie-algebra logarithms.  An explicit two-link field gives an exact nonzero quadratic BCH defect after projection to the retained space.  We then classify the uniform cyclic shifts that remove the ordered-path obstruction: precisely the shifts \(1\) and \(5\) preserve the tangent rows and turn reflected paths into same-order or exact inverse words.  For shift \(1\), canonical stems from the reflection-fixed root \(x_\ast=(1,0,0,0)\) place all loop logs in one gauge-covariant color frame without spoiling reflection closure.  The rooted package is distinct from the eight-edge shifted core and has different density constants.  All results are finite-block coordinate statements.
+
+**Keywords:** lattice gauge theory; Yang--Mills theory; reflection compatibility; holonomy logs; Bianchi identities; finite blocks.
+
+## 1. Introduction
+
+In constructive approaches to four-dimensional Yang--Mills theory, finite-regulator coordinate choices must preserve the structural properties intended to survive the continuum limit.  One such property is compatibility with Euclidean time reflection.  This paper studies a finite local instance of that issue: whether a retained holonomy-log coordinate on a fixed \(SU(2)\) lattice block realizes the same reflection symmetry at nonlinear group level that it has at tangent level.
+
+The retained variables are based holonomy-log coordinates associated with the 24 boundary face loops of the \(n=2\), four-dimensional block, projected to the 17-dimensional subspace compatible with the finite Bianchi relations.  The result is intended as a finite-regulator coordinate-design step inside a broader constructive program, not as a continuum construction or a spectral-gap theorem.
+
+For the original based-loop ordering, reflection compatibility fails at finite group level.  The tangent retained quotient and the minimum-action tangent lift are reflection-compatible, but reflection of the time-containing holonomies produces inverse loops with a cyclic basepoint shift, hence a partial-transport conjugation.  This conjugation is invisible to Wilson traces but not to based Lie-algebra logarithms.
+
+The contribution is finite and local.  We prove the exact rank-17 retained quotient, identify an exact retained quadratic BCH obstruction for the original based paths, classify the valid uniform cyclic shifts as \(1\) and \(5\), and construct a shift-\(1\) rooted package whose holonomies transform by one common root conjugation and close exactly under time reflection.  The common-root and stem mechanism itself is standard in path-gauge and maximal-tree formulations; the point of the present paper is the explicit fixed-block reflection obstruction and repair for this retained holonomy-log package.
+
+The scope is deliberately finite-regulator.  Continuum construction, Osterwalder--Schrader reconstruction, confinement, area laws, exponential clustering, exact one-shell RG estimates, exceptional-sector control, and the mass gap remain outside the claims of this paper.
+
+### 1.1 Finite checks and exact statements
+
+Several finite claims in this paper are accompanied by reproducible linear-algebra or group-valued computations.  The exact path-word, rank, and BCH statements are proved before any floating-point table is used.  The computations verify that the implemented matrices and path lists realize the stated finite objects, measure residuals for the corresponding identities, and provide reproducibility anchors for the reported constants.
+
+Accordingly, the numerical material is used only as finite-dimensional verification of the stated propositions.
+
+## 2. Finite block and retained quotient
+
+This section fixes the finite object studied in the paper.
+
+### 2.1 The \(n=2\) four-dimensional cubical block
+
+Let
+
+\[
+\Lambda_2=\{0,1,2\}^4
+\]
+
+be the vertex set of a finite \(2\times2\times2\times2\) hypercubic block.  We write a vertex as
+
+\[
+x=(x_0,x_1,x_2,x_3),
+\]
+
+taking \(x_0\) as the Euclidean time coordinate for the reflection.
+
+The positively oriented nearest-neighbor links are pairs
+
+\[
+e=(x,\mu),\qquad \mu\in\{0,1,2,3\},
+\]
+
+with \(x_\mu\in\{0,1\}\) and \(x_\alpha\in\{0,1,2\}\) for \(\alpha\ne\mu\).  The link \(e=(x,\mu)\) runs from \(x\) to \(x+\hat\mu\).  The number of positive oriented links is
+
+\[
+4\cdot 2\cdot 3^3=216.
+\]
+
+The elementary oriented plaquettes are indexed by a basepoint \(x\) and an ordered plane \(\mu<\nu\).  There are
+
+\[
+\binom42\cdot 2^2\cdot 3^2=216
+\]
+
+positive oriented plaquettes.  The elementary cubes are similarly indexed by triples of coordinate directions; there are
+
+\[
+\binom43\cdot 2^3\cdot 3=96
+\]
+
+positive oriented cubes.
+
+At the tangent level, a real scalar link cochain is an element of
+
+\[
+C^1(\Lambda_2;\mathbb R)\cong\mathbb R^{216}.
+\]
+
+For \(SU(2)\), each link has three Lie-algebra coordinates, so the tangent link-color space is
+
+\[
+C^1(\Lambda_2;\mathbb R)\otimes\mathbb R^3
+\cong
+\mathbb R^{648}.
+\]
+
+Fix the anti-Hermitian basis
+
+\[
+T_a=-\frac{i}{2}\sigma_a,\qquad a=1,2,3,
+\]
+
+so that
+
+\[
+[T_a,T_b]=\varepsilon_{abc}T_c.
+\]
+
+We identify \(A=A^aT_a\) with \((A^1,A^2,A^3)\in\mathbb R^3\); under this identification the Lie bracket is the vector cross product.
+
+### 2.2 Link variables and logarithmic chart
+
+To each positive oriented link \(e\), assign a group variable
+
+\[
+U_e\in SU(2).
+\]
+
+For the reversed oriented link \(\bar e\), set
+
+\[
+U_{\bar e}=U_e^{-1}.
+\]
+
+Near the identity, write
+
+\[
+U_e=\exp(gA_e),
+\qquad
+A_e\in\mathfrak{su}(2)\cong\mathbb R^3,
+\]
+
+where \(g\) is the small shell coupling.  The present paper uses this logarithmic chart only inside the finite block.  It does not assume any global continuum chart.
+
+We use the principal chart containing the identity.  In the unit-quaternion representation \(q=(q_0,\mathbf q)\) of \(SU(2)\), every evaluated loop holonomy is required to satisfy \(q_0>0\).  Leaving this domain is a chart failure.  Replacing \(q\) by \(-q\) is not permitted, because these are different elements of \(SU(2)\).
+
+### 2.3 The 24 retained face-loop variables
+
+The retained variables are coarse local curvature-tile variables on the boundary faces of the block.
+
+For each coordinate plane
+
+\[
+\mu<\nu,\qquad \mu,\nu\in\{0,1,2,3\},
+\]
+
+let \(\rho,\sigma\) denote the two transverse coordinate directions.  Fix
+
+\[
+x_\rho\in\{0,2\},
+\qquad
+x_\sigma\in\{0,2\}.
+\]
+
+This determines one boundary \(2\times2\) square face in the \(\mu\nu\)-plane.  There are
+
+\[
+\binom42\cdot2^2=6\cdot4=24
+\]
+
+such faces.
+
+For each such face, let \(b\) be the corner with \(b_\mu=b_\nu=0\) and the prescribed transverse coordinates.  The original based boundary path is the eight-step word
+
+\[
+\mu,+\mu,+\nu,+\nu,-\mu,-\mu,-\nu,-\nu,
+\]
+
+starting at \(b\).  This fixes both orientation and basepoint; it is not merely an unbased geometric square.  Denote the 24 resulting paths by \(\gamma_i\).
+
+At the tangent level, let \(r_i^{\rm raw}\) be the signed circulation along \(\gamma_i\).  We use the normalized row
+
+\[
+r_i=\frac1{n^2}r_i^{\rm raw}=\frac14r_i^{\rm raw}
+\in(\mathbb R^{216})^\ast.
+\]
+
+Collecting all 24 rows gives the face-loop row map
+
+\[
+R_{\rm face}: \mathbb R^{216}\longrightarrow\mathbb R^{24},
+\qquad
+(R_{\rm face}a)_i=r_i(a).
+\]
+
+Equivalently, \(r_i(a)\) is the tangent circulation around the \(i\)-th coarse face loop.  By the discrete Stokes identity, it also equals the sum of the elementary plaquette curvatures over the corresponding \(2\times2\) face, with orientation signs.
+
+Thus \(R_{\rm face}=n^{-2}R_{\rm face}^{\rm raw}\) throughout this paper.  The scalar factor does not change its range, rank, or reflection relations, but fixing it here avoids mixing raw and density-normalized coordinates later.
+
+### 2.4 Bianchi-compatible retained quotient
+
+The 24 face-loop rows are not independent.  They satisfy seven finite Bianchi-type relations, leaving rank
+
+\[
+\operatorname{rank}R_{\rm face}=17.
+\]
+
+This count is exact.  Regard the block as a subdivided coarse four-cube.  Its boundary cell complex is a cubical decomposition of \(S^3\) with 8 three-cells and 24 two-cells.  Since
+
+\[
+H_3(S^3;\mathbb R)\cong\mathbb R,
+\qquad
+H_2(S^3;\mathbb R)=0,
+\]
+
+the boundary map \(\partial_3:C_3\to C_2\) has rank \(8-1=7\), and exactness at \(C_2\) gives
+
+\[
+\dim\ker\partial_2=\dim\operatorname{im}\partial_3=7.
+\]
+
+Hence \(\operatorname{rank}\partial_2=24-7=17\).  Subdivision sends every coarse edge to the sum of its two fine edges and is injective on coarse one-chains.  The 24 rows \(r_i^{\rm raw}\) are precisely the subdivided coarse two-cell boundaries, so subdivision introduces no additional relation.  Scaling by \(n^{-2}\) does not change rank.  This proves the stated rank and relation count without floating-point linear algebra.
+
+Thus the retained scalar curvature-tile space is not all of \(\mathbb R^{24}\), but the 17-dimensional compatible subspace
+
+\[
+\mathcal R_{\rm tile}
+=
+\operatorname{Ran}R_{\rm face}
+\subset
+\mathbb R^{24}.
+\]
+
+Equivalently, let
+
+\[
+\mathcal B
+=
+\{\ell\in(\mathbb R^{24})^\ast:\ell(B)=0
+\text{ for every }B\in\mathcal R_{\rm tile}\}
+\]
+
+be the seven-dimensional space of Bianchi relation covectors.  Then
+
+\[
+\mathcal R_{\rm tile}
+=
+\{B\in\mathbb R^{24}:\ell(B)=0\text{ for all }\ell\in\mathcal B\}.
+\]
+
+After choosing the Euclidean inner product on \(\mathbb R^{24}\), one may identify \(\mathcal B\) with a seven-dimensional normal subspace \(\mathcal B^\#\subset\mathbb R^{24}\), and then \(\mathcal R_{\rm tile}\) is canonically represented as \((\mathcal B^\#)^\perp\).  This is the sense in which the retained variables are the Bianchi-compatible quotient of the 24 face variables.
+
+Choose an orthonormal quotient basis
+
+\[
+Q:\mathbb R^{17}\longrightarrow \mathbb R^{24}
+\]
+
+whose columns span \(\mathcal R_{\rm tile}\).  A scalar retained coordinate is then
+
+\[
+k\in\mathbb R^{17},
+\]
+
+and the corresponding compatible face-loop vector is \(Qk\in\mathcal R_{\rm tile}\).
+
+Including color gives the retained color-coordinate space
+
+\[
+\mathcal K
+=
+\mathbb R^{17}\otimes\mathbb R^3
+\cong
+\mathbb R^{51}.
+\]
+
+This 51-dimensional space is the finite retained coordinate space used throughout the paper.
+
+### 2.5 Minimum-action lift and complementary directions
+
+The larger constructive route also uses a preferred tangent lift from retained face data back to link logarithms.  For this paper, only the following finite-dimensional facts are needed.
+
+Let \(D_1\) be the oriented link-to-plaquette coboundary.  The weak-coupling quadratic Wilson action is
+
+\[
+S_2(a)=\frac12\|D_1a\|^2.
+\]
+
+The action has the gauge kernel
+
+\[
+\mathcal G=\ker D_1=\operatorname{im}D_0,
+\qquad \dim\mathcal G=80,
+\]
+
+where the equality uses contractibility of the block and the constant vertex mode is removed.  To make the lift unique, define \(Lk\) to be the minimizer in \(\mathcal G^\perp\) of \(S_2(a)\), subject to
+
+\[
+R_{\rm face}a=Qk.
+\]
+
+On \(\mathcal G^\perp\), \(D_1^TD_1\) is positive definite, so the constrained minimizer is unique.  Equivalently, \(L\) is the Moore--Penrose minimum-norm section of the feasible affine space.  The same scalar lift is used independently in each \(SU(2)\) color direction.  This gives a retained lifted subspace of color dimension 51.
+
+The orthogonal complement used in the route decomposes into positive high modes and gauge modes.  For the \(n=2\) block, the finite split has:
+
+| component | scalar dimension | color dimension |
+|---|---:|---:|
+| retained curvature quotient | 17 | 51 |
+| positive high sector | 119 | 357 |
+| gauge vertex sector | 80 | 240 |
+| total link space | 216 | 648 |
+
+These numbers are part of the finite-block bookkeeping.  The present paper uses them mainly to locate the retained coordinate space and to make clear that the reflection obstruction is not caused by a dimension mismatch.
+
+### 2.6 Time reflection
+
+Time reflection is the involution
+
+\[
+\theta(t,x_1,x_2,x_3)=(2-t,x_1,x_2,x_3),
+\]
+
+which fixes the middle time slice \(t=1\).
+
+It induces a signed action on oriented links.  If a reflected link points in the positive coordinate direction, it is identified with the corresponding positive oriented link.  If it points in the negative coordinate direction, it is identified with the inverse orientation and receives the corresponding sign at the tangent level.
+
+Thus time reflection acts linearly on scalar link cochains:
+
+\[
+\Theta_1:\mathbb R^{216}\longrightarrow\mathbb R^{216}.
+\]
+
+It also acts on based paths by reflecting each directed link segment and preserving the order induced by the reflected path.  This distinction is crucial:
+
+- at the tangent level, only signed circulations matter;
+- at the finite \(SU(2)\) level, the based order of the path matters.
+
+The central question of the paper is whether the retained face-loop coordinate map is compatible with this reflection action after passing from tangent circulations to based nonabelian holonomy logs.
+
+### 2.7 Finite-block inventory used in the paper
+
+The following table records the finite object studied here.
+
+| item | value |
+|---|---:|
+| vertices | \(3^4=81\) |
+| positive oriented links | \(216\) |
+| positive oriented plaquettes | \(216\) |
+| positive oriented cubes | \(96\) |
+| retained face loops | \(24\) |
+| segments per retained face loop | \(8\) |
+| Bianchi-type relations among face loops | \(7\) |
+| retained scalar quotient dimension | \(17\) |
+| retained \(SU(2)\) color-coordinate dimension | \(51\) |
+
+This finite setup is the stage for the next two questions:
+
+1. Does time reflection preserve the 17-dimensional tangent retained quotient?
+2. Does a based \(SU(2)\) holonomy-log realization of that quotient remain reflection-covariant at finite \(g\)?
+
+## 3. Linear reflection compatibility
+
+At the tangent level, each face-loop holonomy log linearizes to a signed link circulation.  These 24 circulation rows determine the retained quotient.  The first question is whether time reflection preserves this finite row space and induces an orthogonal action on the 17-dimensional quotient.
+
+### Lemma 3.1 — linear retained quotient reflection compatibility
+
+Let
+
+\[
+\Theta_1:\mathbb R^{216}\to\mathbb R^{216}
+\]
+
+be the signed permutation induced by time reflection on scalar link cochains.  Let
+
+\[
+R_{\rm face}:\mathbb R^{216}\to\mathbb R^{24}
+\]
+
+be the 24-row face-loop circulation map from Section 2.  Then the row space of \(R_{\rm face}\) is invariant under \(\Theta_1\).  More precisely, there is a signed permutation matrix
+
+\[
+P_{\rm face}:\mathbb R^{24}\to\mathbb R^{24}
+\]
+
+such that
+
+\[
+\boxed{
+R_{\rm face}\Theta_1=P_{\rm face}R_{\rm face}.
+}
+\]
+
+Consequently, time reflection preserves the Bianchi-compatible retained subspace
+
+\[
+\mathcal R_{\rm tile}=\operatorname{Ran}R_{\rm face}\subset\mathbb R^{24}
+\]
+
+and descends to an orthogonal action on the 17-dimensional retained quotient.  If \(Q:\mathbb R^{17}\to\mathbb R^{24}\) is an orthonormal basis for \(\mathcal R_{\rm tile}\), the induced retained reflection matrix is
+
+\[
+\boxed{
+R_K=Q^TP_{\rm face}Q\in O(17).
+}
+\]
+
+Including \(SU(2)\) color, the induced retained reflection is
+
+\[
+R_K\otimes I_3
+\]
+
+on \(\mathbb R^{17}\otimes\mathbb R^3\cong\mathbb R^{51}\).
+
+### Proof
+
+Time reflection maps vertices of \(\Lambda_2\) to vertices of \(\Lambda_2\).  It therefore maps each oriented nearest-neighbor link to either a positively oriented link or the inverse of a positively oriented link.  On scalar link cochains this gives the signed permutation \(\Theta_1\).
+
+Each retained face-loop row \(r_i\) is the signed circulation around one boundary \(2\times2\) face.  Time reflection sends such a boundary face to another boundary \(2\times2\) face of the same block.  The orientation may be preserved or reversed, but the reflected circulation is still one of the 24 retained face-loop circulations, possibly with a minus sign.  Hence for every row \(r_i\) there are an index \(\pi(i)\) and a sign \(\varepsilon_i\in\{\pm1\}\) such that
+
+\[
+r_i\Theta_1=\varepsilon_i r_{\pi(i)}.
+\]
+
+Collecting these 24 identities gives
+
+\[
+R_{\rm face}\Theta_1=P_{\rm face}R_{\rm face},
+\]
+
+where \(P_{\rm face}\) is the corresponding signed permutation matrix.
+
+Since \(P_{\rm face}\) is orthogonal, it preserves dimensions and inner products in \(\mathbb R^{24}\).  The identity above implies that \(P_{\rm face}\) maps the range \(\mathcal R_{\rm tile}\) to itself.  Therefore its restriction to \(\mathcal R_{\rm tile}\) is an orthogonal transformation.
+
+Choosing an orthonormal basis \(Q\) for \(\mathcal R_{\rm tile}\), this restricted transformation is represented by
+
+\[
+R_K=Q^TP_{\rm face}Q.
+\]
+
+Because \(Q^TQ=I_{17}\) and \(P_{\rm face}\mathcal R_{\rm tile}=\mathcal R_{\rm tile}\), one obtains
+
+\[
+R_K^TR_K=I_{17}.
+\]
+
+Thus \(R_K\in O(17)\), proving that the linear retained quotient is reflection-compatible.
+
+### Compatibility with the minimum-action lift
+
+The minimum-action lift \(L:\mathbb R^{17}\to\mathbb R^{216}\) used in the finite-block construction is also compatible with the same retained reflection action.
+
+Reflection intertwines the cellular coboundaries, so it preserves both \(\mathcal G=\ker D_1\) and \(\mathcal G^\perp\).  The quadratic tangent action
+
+\[
+S_2(a)=\frac12\|D_1a\|^2
+\]
+
+is invariant under time reflection, because reflection only permutes and orients plaquettes.  If \(a=Lk\) is the chosen minimum-action representative of retained data \(Qk\), then \(\Theta_1a\) is a minimum-action representative of reflected retained data
+
+\[
+P_{\rm face}Qk=Q(R_Kk).
+\]
+
+Both representatives lie in \(\mathcal G^\perp\), where the constrained minimizer is unique.  Therefore
+
+\[
+\boxed{
+\Theta_1L=LR_K.
+}
+\]
+
+This explains why the lift-level reflection and tile-quotient reflection agree to roundoff in the finite matrix verification.  It also shows that the later nonlinear obstruction is not caused by choosing the wrong linear reflection action.
+
+### Finite matrix verification
+
+The preceding argument is combinatorial.  The finite matrix realization used in the computations is checked directly for the same identities.  The computation verifies that the implemented matrices for \(R_{\rm face}\), \(Q\), \(L\), and \(\Theta_1\) satisfy the signed-permutation row-space identity, have no leakage out of the 17-dimensional quotient, and give the same reflection representation for the minimum-action lift as for the face-row quotient.
+
+The implementation constructs:
+
+1. the 216-link reflection matrix \(\Theta_1\);
+2. the 24 face-loop row matrix \(R_{\rm face}\);
+3. the 17-dimensional quotient basis \(Q\);
+4. the minimum-action retained lift \(L\);
+5. the induced quotient and lift reflection matrices.
+
+It then measures residuals of the identities above.
+
+| quantity | value | meaning |
+|---|---:|---|
+| scalar links | \(216\) | dimension of scalar link cochains |
+| tile loops | \(24\) | number of retained face-loop rows |
+| retained rank | \(17\) | Bianchi-compatible retained quotient dimension |
+| tile row rank | \(17\) | rank of the 24 face-loop row map |
+| quotient orthogonality error | \(2.54127620691\times10^{-15}\) | \(Q^TQ\approx I\) |
+| constraint-lift residual | \(1.15064868438\times10^{-13}\) | lift satisfies retained face constraints |
+| tile-row reflection residual | \(1.3415637684\times10^{-15}\) | implemented \(R_{\rm face}\Theta_1=P_{\rm face}R_{\rm face}\) |
+| quotient reflection leak | \(2.97584013804\times10^{-15}\) | reflected quotient stays inside the 17D subspace |
+| quotient reflection orthogonality error | \(1.04459705298\times10^{-14}\) | induced \(R_K\) is orthogonal |
+| retained lift reflection leak | \(5.64572744853\times10^{-14}\) | reflected lift stays inside lifted retained section |
+| lift-vs-tile reflection relative difference | \(2.01097456211\times10^{-14}\) | lift reflection and quotient reflection agree |
+
+These numbers are all at roundoff scale and confirm that the finite matrices implement the combinatorial reflection action correctly.
+
+Consequently, the based-log reflection problem found in Section 5 is not a linear quotient artifact: the tangent retained quotient and the minimum-action retained lift are already reflection-compatible.  The obstruction is genuinely nonlinear and comes from based nonabelian path order.
+
+## 4. Based holonomy-log coordinates
+
+For an oriented path
+
+\[
+\gamma=(e_1,\ldots,e_m),
+\]
+
+write
+
+\[
+U_\gamma=U_{e_1}\cdots U_{e_m}.
+\]
+
+This section uses the left-to-right traversal convention, so if a path is the concatenation \(\alpha\beta\), meaning first traverse \(\alpha\) and then traverse \(\beta\), then
+
+\[
+U_{\alpha\beta}=U_\alpha U_\beta.
+\]
+
+If a right-action convention is used instead, the same statements hold with the conjugating transport inverted.  The obstruction is convention-independent: cyclic rebasing changes a nonabelian based holonomy by conjugation.
+
+For each retained face path \(\gamma_i\), define the based holonomy
+
+\[
+U_{\gamma_i}=U_{e_1}\cdots U_{e_8},
+\]
+
+where the product is ordered from the chosen basepoint of the eight-segment \(n=2\) face loop.  In the positive-scalar principal chart, define the normalized based holonomy-log coordinate
+
+\[
+\bar X_i(A;g)=\frac1{gn^2}\log U_{\gamma_i}
+\qquad (g\ne0).
+\]
+
+At \(g=0\), define \(\bar X_i(A;0)\) by continuous extension.  The 17-dimensional retained coordinate is
+
+\[
+K_g(A)=(Q^T\otimes I_3)\bar X(A;g).
+\]
+
+At \(g=0\), the Baker--Campbell--Hausdorff expansion gives
+
+\[
+\bar X_i(A;0)=\frac1{n^2}\sum_{e\in\gamma_i}\sigma_e A_e,
+\]
+
+which is exactly the normalized row \(r_i(A)\).  Therefore the based-log coordinate has the correct linear retained space.
+
+The problem is that finite \(g\) remembers nonabelian path order and basepoint.  Two based closed paths can define the same unbased geometric loop and the same tangent circulation while producing different based Lie-algebra logarithms.
+
+## 5. Nonlinear reflection obstruction
+
+The original 24 based face paths are closed under reflection as linear loop functionals but not as based ordered paths.
+
+| path class under time reflection | count |
+|---|---:|
+| same-order reflected paths | 12 |
+| inverse-cyclic reflected paths | 12 |
+| unmatched paths | 0 |
+
+The 12 problematic paths are the time-containing face loops.  Time reflection sends them to cyclically shifted inverse loops.
+
+### Lemma 5.1 — nonabelian cyclic-shift conjugation
+
+Let \(\gamma=\alpha\beta\) be a based closed path, decomposed into two consecutive path pieces.  With the traversal convention of Section 4,
+
+\[
+U_\gamma=U_\alpha U_\beta .
+\]
+
+The cyclically rebased path \(\gamma'=\beta\alpha\) has holonomy
+
+\[
+U_{\gamma'}=U_\beta U_\alpha
+=
+U_\alpha^{-1}U_\gamma U_\alpha.
+\]
+
+Thus a cyclic shift of a closed nonabelian path does not preserve the based holonomy.  It conjugates the based holonomy by the partial transport \(U_\alpha\).
+
+**Proof.**  Since \(\gamma=\alpha\beta\), \(U_\gamma=U_\alpha U_\beta\).  Multiplying by \(U_\alpha^{-1}\) on the left and by \(U_\alpha\) on the right gives
+
+\[
+U_\alpha^{-1}U_\gamma U_\alpha
+=
+U_\alpha^{-1}(U_\alpha U_\beta)U_\alpha
+=
+U_\beta U_\alpha
+=
+U_{\beta\alpha}.
+\]
+
+This is exactly the holonomy of the cyclically shifted path.  \(\square\)
+
+Inside the principal logarithm chart,
+
+\[
+\log(U_\alpha^{-1}U_\gamma U_\alpha)
+=
+\operatorname{Ad}_{U_\alpha^{-1}}\log U_\gamma .
+\]
+
+Therefore, if \(\bar X_\gamma=(gn^2)^{-1}\log U_\gamma\), the cyclically shifted based log is
+
+\[
+\bar X_{\gamma'}=
+\operatorname{Ad}_{U_\alpha^{-1}}\bar X_\gamma.
+\]
+
+For an abelian group this is harmless.  For \(SU(2)\), it is generically not harmless: \(\operatorname{Ad}_{U_\alpha^{-1}}\) is a nontrivial rotation of \(\mathfrak{su}(2)\cong\mathbb R^3\).
+
+### Corollary 5.2 — why the defect starts after the tangent limit
+
+Suppose
+
+\[
+U_\alpha=\exp(gY+O(g^2)),
+\qquad
+U_\gamma=\exp(gX+O(g^2)).
+\]
+
+Let
+
+\[
+\bar X_\gamma(g)=(gn^2)^{-1}\log U_\gamma.
+\]
+
+Then the cyclically shifted scaled log satisfies
+
+\[
+(gn^2)^{-1}\log(U_\alpha^{-1}U_\gamma U_\alpha)
+=
+\bar X_\gamma(g)-g[Y,\bar X_\gamma(0)]+O(g^2).
+\]
+
+Thus the normalized tangent circulation is recovered at \(g=0\), but relative to the unshifted based log the cyclic rebase has a first nonlinear correction proportional to a nonabelian commutator.
+
+If reflection sends a loop to a cyclically shifted inverse loop, the expected linear sign is also present.  The additional obstruction is still the same partial-transport conjugation.  The defect vanishes only when the relevant partial transport commutes with the loop log, or when the retained quotient accidentally kills the conjugation difference.
+
+This explains the finite-\(g\) pattern: the linear retained quotient can be exactly reflection-compatible while the based retained log is not.
+
+### Wilson traces versus based logs
+
+Wilson traces and conjugacy-class variables do not see this cyclic-rebase defect, because
+
+\[
+\operatorname{tr}(U_\alpha^{-1}U_\gamma U_\alpha)
+=
+\operatorname{tr}(U_\gamma).
+\]
+
+For \(SU(2)\), the trace also does not distinguish \(U\) from \(U^{-1}\).  Thus Wilson trace variables are natural reflection-safe fallback variables.  However, traces alone do not automatically retain the full oriented 17-dimensional tangent quotient needed in the present shell analysis.  The finite-block repair in Section 6 keeps logarithmic retained variables but changes the loop basing/order so that reflection no longer introduces the unwanted cyclic conjugation.
+
+### Proposition 5.3 — obstruction for the original based paths
+
+For the original 24 based face paths in the \(n=2\), \(4D\) block, time reflection is linearly closed on the 24 face-loop rows and induces the correct 17-dimensional quotient action, but the corresponding finite-\(g\) based holonomy-log coordinate is not an exact nonlinear reflection-covariant coordinate.
+
+More precisely, 12 reflected paths are same-order paths and 12 are inverse-cyclic paths.  On the inverse-cyclic paths, reflection produces the expected inverse-loop sign together with an additional conjugation by a partial path transport.  This difference survives projection to the 17-dimensional retained space.
+
+**Proof.**  For the signed Lie-algebra values \(B_{i,a}=\sigma_{i,a}A_{e_{i,a}}\) along path \(\gamma_i\), BCH gives
+
+\[
+\bar X_i(A;g)
+=
+(R_{\rm face}A)_i
++\frac{g}{2n^2}
+\sum_{1\le a<b\le8}[B_{i,a},B_{i,b}]
++O(g^2).
+\]
+
+Let
+
+\[
+F_i(A)=\sum_{a<b}[B_{i,a},B_{i,b}]
+\]
+
+and let \(P_{\rm face}\) be the signed permutation induced at linear order.  The quadratic equivariance defect before retained projection is
+
+\[
+D(A)=F(\Theta_1A)-P_{\rm face}F(A).
+\]
+
+Choose the two-link field
+
+\[
+A_{((0),(0,0,0,0))}=T_1,\qquad
+A_{((0),(0,0,0,2))}=T_2,
+\]
+
+with every other link value zero.  Direct use of \([T_1,T_2]=T_3\) in the eight-step path words gives the exact result
+
+\[
+D_i(A)=0\quad(i\ne8),\qquad D_8(A)=-2T_3,
+\]
+
+where index \(8\) is the ninth face, the \(03\)-plane face with \(x_1=x_2=0\).  This raw defect is not orthogonal to the compatible face space.  Indeed, with \(R_{\rm face}^{\rm raw}\) denoting the integer row matrix,
+
+\[
+\bigl(R_{\rm face}^{\rm raw}\bigr)^TD(A)
+\]
+
+has, among other nonzero entries, coefficient \(-2T_3\) on the time link \(((0),(0,0,0,0))\).  Since
+
+\[
+\ker\bigl(R_{\rm face}^{\rm raw}\bigr)^T
+=
+\bigl(\operatorname{Ran}R_{\rm face}^{\rm raw}\bigr)^\perp,
+\]
+
+we have \((Q^T\otimes I_3)D(A)\ne0\).  Therefore the first nonlinear retained equivariance defect,
+
+\[
+\frac{g}{2n^2}(Q^T\otimes I_3)D(A)+O(g^2),
+\]
+
+is not identically zero.  The original coordinate cannot be exactly reflection-covariant.  \(\square\)
+
+The integer operations in this proof are reproduced by the exact finite-claim certificate in the reproducibility package; no floating-point threshold enters the obstruction certificate.
+
+### Finite-\(g\) witness
+
+For an exactly reflection-compatible based-log coordinate, reflecting the links and then taking retained logs would agree with first taking retained logs and then applying the retained reflection matrix.  Section 3 proves this agreement at \(g=0\).  The finite-\(g\) calculation tests the corresponding nonlinear identity after the nonabelian holonomy product and logarithm are used.
+
+The finite-\(g\) implementation constructs the original 24 based face paths, the 17-dimensional quotient reflection matrix \(R_K\), and a fixed retained-plus-positive-high test field.  It then computes
+
+\[
+\frac{\|K_g(\theta A)-R_KK_g(A)\|}{\|K_g(A)\|}
+\]
+
+for several values of \(g\).  Here \(K_g\) denotes the exact retained based-log coordinate, \(\theta\) is link reflection, and \(R_K\) is the linear retained quotient reflection.
+
+| \(g\) | relative reflection error | absolute error | retained norm |
+|---:|---:|---:|---:|
+| \(0\) | \(1.55960754357\times10^{-15}\) | \(2.00842682542\times10^{-15}\) | \(1.28777706526\) |
+| \(10^{-3}\) | \(1.62017858664\times10^{-4}\) | \(2.0864422782\times10^{-4}\) | \(1.28778536848\) |
+| \(10^{-2}\) | \(1.6197258245\times10^{-3}\) | \(2.08597791213\times10^{-3}\) | \(1.28785864902\) |
+| \(10^{-1}\) | \(1.6156096032\times10^{-2}\) | \(2.08162829885\times10^{-2}\) | \(1.28844758952\) |
+| \(0.3\) | \(4.82733669574\times10^{-2}\) | \(6.22151258301\times10^{-2}\) | \(1.28880850356\) |
+
+At \(g=0\), the residual is roundoff-sized because only the tangent circulation is visible.  For positive \(g\), the residual becomes visible and grows approximately linearly at small \(g\), as predicted by the commutator term in Corollary 5.2.
+
+Thus the original based holonomy-log coordinate fails as an exact nonlinear reflection-covariant coordinate for this finite block.
+
+Thus the obstruction lies not in the retained linear quotient, but in its original based-loop realization.  The shifted replacement preserves the rank-17 tangent data while changing the basing/order of the loops so that reflected paths close as same-order or exact inverse path words, rather than inverse-cyclic ones.
+
+## 6. Shifted cyclic-rebase repair
+
+The obstruction in Section 5 suggests a minimal repair: do not change the retained tangent quotient, but change where each closed loop is based so that time reflection acts by same-order or exact inverse ordered paths rather than by inverse-cyclic paths.
+
+For an eight-segment retained face loop
+
+\[
+\gamma=(e_1,e_2,\ldots,e_8),
+\]
+
+define the cyclic rebase by \(s\) segments as
+
+\[
+\operatorname{cyc}_s(\gamma)
+=
+(e_{1+s},e_{2+s},\ldots,e_8,e_1,\ldots,e_s),
+\]
+
+with indices read modulo \(8\).  We use the least disruptive repair:
+
+\[
+\widetilde\gamma_i=\operatorname{cyc}_1(\gamma_i),
+\]
+
+a uniform one-segment cyclic rebase of all 24 retained face loops.
+
+### Proposition 6.1 — shifted finite-block reflection repair
+
+In the finite \(n=2\), \(4D\), \(SU(2)\) curvature-tile block, a uniform cyclic shift \(s\in\mathbb Z/8\mathbb Z\) gives exact same/inverse reflection closure for all 24 paths if and only if
+
+\[
+s\in\{1,5\}.
+\]
+
+For the smallest choice, let \(\{\gamma_i\}_{i=1}^{24}\) be the original retained face-loop paths and set
+
+\[
+\widetilde\gamma_i=\operatorname{cyc}_1(\gamma_i).
+\]
+
+Then:
+
+1. the shifted paths have the same tangent circulation rows as the original paths;
+2. the 17-dimensional Bianchi-compatible retained quotient is unchanged;
+3. the shifted ordered paths are closed under time reflection by exact same-order or inverse path equality;
+4. inside the principal logarithm chart, the shifted based holonomy-log coordinate is reflection-covariant under the induced retained quotient action.
+
+### Proof
+
+First, cyclic rebasing only changes the chosen starting segment of a closed path.  It does not change the multiset of oriented segments appearing in the path.  Therefore the signed tangent circulation row is unchanged:
+
+\[
+r(\operatorname{cyc}_1(\gamma_i))=r(\gamma_i).
+\]
+
+Thus the shifted row matrix is identical to the original face-loop row matrix:
+
+\[
+R_{\rm shifted}=R_{\rm face}.
+\]
+
+Consequently the rank, Bianchi relation space, retained quotient, and minimum-action tangent lift are unchanged.
+
+Second, the explicit direction word in Section 2 gives the path relation without numerical approximation.  The 12 purely spatial loops satisfy
+
+\[
+\theta\gamma_i=\gamma_{\pi(i)}.
+\]
+
+For each of the 12 time-containing loops,
+
+\[
+\theta\gamma_i
+=
+\operatorname{cyc}_6(\gamma_{\pi(i)}^{-1}).
+\]
+
+Reflection preserves path order, so for a uniform shift \(s\),
+
+\[
+\theta\operatorname{cyc}_s(\gamma_i)
+=
+\operatorname{cyc}_{s+6}(\gamma_{\pi(i)}^{-1}).
+\]
+
+On the other hand,
+
+\[
+\bigl(\operatorname{cyc}_s\gamma_{\pi(i)}\bigr)^{-1}
+=
+\operatorname{cyc}_{8-s}(\gamma_{\pi(i)}^{-1}).
+\]
+
+Exact inverse closure therefore holds precisely when
+
+\[
+s+6\equiv8-s\pmod8,
+\qquad\text{or equivalently}\qquad
+2s\equiv2\pmod8.
+\]
+
+The solutions are \(s=1,5\).  Purely spatial loops close for every \(s\), so these are exactly the valid shifts for the complete package.  With \(s=1\), there is a signed permutation
+
+\[
+\theta\widetilde\gamma_i
+=
+\begin{cases}
+\widetilde\gamma_{\pi(i)}, & \epsilon_i=+1,\\
+\widetilde\gamma_{\pi(i)}^{-1}, & \epsilon_i=-1,
+\end{cases}
+\]
+
+with 12 signs \(\epsilon_i=+1\) and 12 signs \(\epsilon_i=-1\).  This is equality of ordered path words, not equality only after cyclic rebasing.
+
+Third, if \(\theta\widetilde\gamma_i=\widetilde\gamma_{\pi(i)}\), then the reflected holonomy is the corresponding shifted holonomy.  If
+
+\[
+\theta\widetilde\gamma_i=\widetilde\gamma_{\pi(i)}^{-1},
+\]
+
+then
+
+\[
+U_{\theta\widetilde\gamma_i}
+=
+U_{\widetilde\gamma_{\pi(i)}}^{-1}.
+\]
+
+Inside the principal chart,
+
+\[
+\log U_{\widetilde\gamma_{\pi(i)}^{-1}}
+=
+-\log U_{\widetilde\gamma_{\pi(i)}}.
+\]
+
+Thus reflection acts on the 24 normalized shifted logs by a signed permutation and no extra partial-transport conjugation appears.  Passing to the same 17-dimensional retained space gives the reflection action already constructed in Section 3.
+
+This proves the finite-block repair claim.  \(\square\)
+
+### Finite enumeration of shifts
+
+The exact proof above is mirrored by a deterministic enumeration.  It compares all eight uniform shifts of the explicit path words with their reflected same-order and exact-inverse path lists.
+
+The valid exact uniform shifts are:
+
+| valid exact uniform cyclic shifts |
+|---|
+| \(1,5\) |
+
+The paper uses shift \(1\), the smallest repair.
+
+The first check is that the repair does not change the tangent retained variables.  A repair that fixed reflection but changed the 17-dimensional quotient would no longer represent the same local shell coordinate.
+
+| quantity | value |
+|---|---:|
+| original row rank | 17 |
+| shifted row rank | 17 |
+| row difference norm | 0 |
+| quotient reflection leak | \(2.97584013804\times10^{-15}\) |
+| lift-vs-tile reflection relative difference | \(2.01097456211\times10^{-14}\) |
+| retained rank | 17 |
+| Bianchi relations | 7 |
+| density min Hessian | 4 |
+| density max Hessian | \(6.15384615385\) |
+
+The second check is the ordered-path closure itself.  This is the direct finite test for the Section 5 obstruction: exact inverse paths are required, rather than inverse-cyclic paths.
+
+| candidate | cyclic shift | exact same-order | exact inverse | unmatched |
+|---|---:|---:|---:|---:|
+| original ordering | \(0\) | 12 | 0 | 12 |
+| uniform cyclic rebase | \(1\) | 12 | 12 | 0 |
+
+These two tables show the key finite-block tradeoff: the shifted coordinate leaves the tangent quotient untouched while repairing the ordered-path reflection defect.
+
+### Finite-\(g\) shifted equivariance
+
+The finite-\(g\) test is then repeated with the shifted coordinate:
+
+\[
+\widetilde K_g(\theta A)
+=
+R_K\widetilde K_g(A)
+\]
+
+holds numerically at finite \(g\), where \(\widetilde K_g\) is the shifted retained holonomy-log coordinate.  The implementation constructs the shifted paths, evaluates exact \(SU(2)\) holonomy logs on the same deterministic retained-plus-positive-high probe pattern, and measures the relative residual.
+
+After the repair, the finite-\(g\) reflection defect disappears to roundoff:
+
+| \(g\) | relative error | absolute error | retained norm |
+|---:|---:|---:|---:|
+| \(0\) | \(1.5569062183\times10^{-15}\) | \(2.00494812069\times10^{-15}\) | \(1.28777706526\) |
+| \(10^{-3}\) | \(1.53434734698\times10^{-15}\) | \(1.97591005486\times10^{-15}\) | \(1.28778536278\) |
+| \(10^{-2}\) | \(1.52833656607\times10^{-15}\) | \(1.96828059503\times10^{-15}\) | \(1.28785807965\) |
+| \(10^{-1}\) | \(1.58853152424\times10^{-15}\) | \(2.04664915032\times10^{-15}\) | \(1.28839064199\) |
+| \(0.3\) | \(1.59164912432\times10^{-15}\) | \(2.05051589755\times10^{-15}\) | \(1.2882964381\) |
+| \(0.8\) | \(1.56852934459\times10^{-15}\) | \(2.0079051434\times10^{-15}\) | \(1.28011959121\) |
+
+Unlike the original coordinate, there is no visible finite-\(g\) growth of the equivariance defect.
+
+### Shifted-core density constants
+
+This subsection concerns the eight-segment shifted-core paths \(\widetilde\gamma_i\), before stems are attached.  The cyclic shift changes the nonlinear Jacobian and therefore changes the retained half-density matrix.  The density operator must be rebuilt; it is not enough to reuse the old C5AW matrix.
+
+The relevant check is whether the rebuilt shifted retained and combined density matrices have even reflection residuals at roundoff scale.  The comparison is:
+
+| quantity | old based coordinate | shifted-core coordinate |
+|---|---:|---:|
+| combined reflection residual | \(0.940486836864\) | \(4.61255124852\times10^{-14}\) |
+| odd operator norm | \(0.388456446008\) | \(0.496353904572\) |
+| covariance \(L^2\) constant squared | \(0.0315650978782\) | \(0.050689424924\) |
+
+The shifted-core repair increases the finite odd-density constants, but it restores reflection placement.  These constants cannot be assigned to the rooted package without recomputing with the stems included; Section 7 performs that distinct calculation.  Neither set of constants proves the exact one-shell theorem.
+
+### Interpretation
+
+The shifted cyclic rebase repairs the obstruction found in Section 5 without changing the tangent retained quotient.  It is therefore a coordinate-placement repair, not a change of the finite retained curvature data.
+
+Gauge covariance imposes one further requirement.  A based loop log is conjugated by the gauge transformation at its basepoint.  Since the shifted loops have different basepoints, Section 7 adds a common-stem rooted package so that all retained holonomies transform by simultaneous conjugation at one fixed root.
+
+## 7. Common-stem rooted package
+
+Section 6 repairs the reflection behavior of the shifted based loops.  We now impose a common color frame.
+
+If a closed loop is based at \(b_i\), then under a lattice gauge transformation \(h_x\in SU(2)\) its holonomy transforms by conjugation at \(b_i\).  Since the 24 shifted loops generally have different basepoints, their based logs do not automatically live in one common color frame.  The common-stem construction fixes this by transporting every loop to one shared root.
+
+Choose the reflection-fixed root
+
+\[
+x_\ast=(1,0,0,0).
+\]
+
+This root lies at the midpoint in the time direction of the \(n=2\) block, so it is fixed by \(t\mapsto2-t\).
+
+For each shifted face loop \(\widetilde\gamma_i\), let \(b_i\) be its basepoint.  Define the canonical Manhattan stem by moving from \(x_\ast\) to \(b_i\) in coordinate order \(0,1,2,3\), using the required signed unit steps in each coordinate:
+
+\[
+s_i:x_\ast\to b_i
+\]
+
+and define the rooted loop
+
+\[
+\widehat{\gamma}_i=s_i\widetilde\gamma_i s_i^{-1}.
+\]
+
+### Proposition 7.1 — common-stem gauge-covariant repair
+
+For the shifted retained face-loop package of Section 6, there is a common-stem rooted realization based at \(x_\ast=(1,0,0,0)\) with the following properties:
+
+1. each rooted path \(\widehat\gamma_i\) is a closed path based at \(x_\ast\);
+2. under finite lattice gauge transformations, every rooted holonomy transforms by simultaneous conjugation at \(x_\ast\);
+3. time reflection sends each rooted path exactly to another rooted path or its inverse;
+4. therefore the shifted retained holonomy-log package is both gauge-covariant in a common color frame and reflection-compatible at finite group level.
+
+### Proof
+
+Let a finite lattice gauge transformation be given by vertex variables \(h_x\in SU(2)\), acting on a positively oriented link \(e:x\to y\) by
+
+\[
+U_e\mapsto h_xU_eh_y^{-1}.
+\]
+
+For any oriented path \(p:a\to b\), the path holonomy transforms as
+
+\[
+U_p\mapsto h_aU_ph_b^{-1}.
+\]
+
+This follows by cancellation of the internal vertex factors along the path.
+
+Apply this to the stem \(s_i:x_\ast\to b_i\), the shifted loop \(\widetilde\gamma_i:b_i\to b_i\), and the reverse stem \(s_i^{-1}:b_i\to x_\ast\).  The rooted holonomy is
+
+\[
+\widehat U_i
+=
+U_{s_i}U_{\widetilde\gamma_i}U_{s_i}^{-1}.
+\]
+
+Under the gauge transformation,
+
+\[
+U_{s_i}\mapsto h_{x_\ast}U_{s_i}h_{b_i}^{-1},
+\qquad
+U_{\widetilde\gamma_i}\mapsto h_{b_i}U_{\widetilde\gamma_i}h_{b_i}^{-1},
+\qquad
+U_{s_i}^{-1}\mapsto h_{b_i}U_{s_i}^{-1}h_{x_\ast}^{-1}.
+\]
+
+Multiplying these three transformed factors gives
+
+\[
+\widehat U_i
+\mapsto
+h_{x_\ast}\widehat U_ih_{x_\ast}^{-1}.
+\]
+
+Thus all rooted holonomies transform by the same root conjugation.  In the logarithm chart,
+
+\[
+\log\widehat U_i
+\mapsto
+\operatorname{Ad}_{h_{x_\ast}}\log\widehat U_i.
+\]
+
+So the rooted retained logs transform in one common color frame.
+
+For reflection, the root is fixed.  The time step of a canonical stem is sent to the oppositely directed canonical time step ending at the reflected target, while the spatial steps and their coordinate order are unchanged.  Hence
+
+\[
+\theta s_i=s_{\pi(i)}.
+\]
+
+Since Section 6 gives
+
+\[
+\theta\widetilde\gamma_i
+=
+\widetilde\gamma_{\pi(i)}
+\quad\text{or}\quad
+\widetilde\gamma_{\pi(i)}^{-1},
+\]
+
+we obtain
+
+\[
+\theta\widehat\gamma_i
+=
+\widehat\gamma_{\pi(i)}
+\quad\text{or}\quad
+\widehat\gamma_{\pi(i)}^{-1}.
+\]
+
+The second equality uses
+
+\[
+(s_{\pi(i)}\widetilde\gamma_{\pi(i)}s_{\pi(i)}^{-1})^{-1}
+=
+s_{\pi(i)}\widetilde\gamma_{\pi(i)}^{-1}s_{\pi(i)}^{-1}.
+\]
+
+Hence reflection acts by exact same/inverse rooted path equality.  No cyclic-rebase conjugation is reintroduced by the stems.  \(\square\)
+
+### Finite path-package check
+
+The proposition has one finite combinatorial input: the explicit stems are required to be compatible with the reflected shifted-loop package.  The path-package enumeration constructs canonical Manhattan stems from \(x_\ast\) to the 24 shifted loop basepoints, reflects every loop and stem as an ordered path word, and verifies that the rooted paths close exactly under same/inverse reflection.
+
+The rooted package has:
+
+| quantity | value |
+|---|---:|
+| root vertex | \((1,0,0,0)\) |
+| root reflection fixed | true |
+| retained loops | 24 |
+| stems | 24 |
+| loop same-order reflections | 12 |
+| loop inverse reflections | 12 |
+| loop unmatched reflections | 0 |
+| stem unmatched reflections | 0 |
+| rooted path unmatched reflections | 0 |
+| shifted-core segments per path | 8 |
+| rooted minimum/maximum segments | \(8/16\) |
+| rooted mean segments | \(13\) |
+| shifted-core/rooted unique edges | \(64/84\) |
+| rooted path-word SHA256 | 1EB6E829D66DCDFA6E12E18CACA3C09A3EDFC3EA56E7EBE0D7ED1E05CA01616C |
+
+The stem choice preserves the shifted-core reflection repair.  The table also fixes the object distinction: the rooted paths are variable-length paths touching 84 links, not aliases for the eight-segment shifted-core paths touching 64 links.  The path-word hash records this object identity in the reproducibility package.
+
+### Finite group covariance and reflection verification
+
+The group-level verification uses \(SU(2)\)-valued link variables.  After a random finite gauge transformation, every rooted holonomy is expected to be related to its original value by the same root conjugation; after link reflection, each rooted holonomy is expected to match the corresponding rooted holonomy or its inverse.
+
+The computation samples random \(SU(2)\) link variables and random vertex gauge transformations, constructs the rooted holonomies, and measures the maximum group distance from the expected transformed holonomy.
+
+| quantity | value |
+|---|---:|
+| random seed | \(20260704\) |
+| random link samples | 8 |
+| max rooted gauge covariance residual | \(1.27373599508\times10^{-15}\) |
+| max rooted reflection residual | \(7.52989890787\times10^{-16}\) |
+
+Both residuals are at roundoff scale.  They check the finite implementation of the common-stem proposition; they do not prove any continuum or infinite-volume theorem.
+
+### Jacobian and density constants
+
+The Jacobian and density are recomputed on the true rooted paths.  This is necessary because attaching a stem changes the ordered BCH tensors even though the stem cancels at tangent order.
+
+First, the shifted coordinate still has no \(O(g)\) retained-coordinate Jacobian/half-density term in the finite \(N_2\) calculation:
+
+| quantity | value |
+|---|---:|
+| samples | 4 |
+| max analytic divergence of \(N_2\) | 0 |
+| max finite-difference divergence of \(N_2\) | 0 |
+
+Second, the shifted-core constants from Section 6 do **not** survive unchanged.  The corrected side-by-side computation is:
+
+| quantity | shifted core | rooted common-stem |
+|---|---:|---:|
+| combined reflection residual | \(4.61255124852\times10^{-14}\) | \(4.35\times10^{-14}\) |
+| odd operator norm | \(0.496353904572\) | \(1.01896272181\) |
+| covariance \(L^2\) constant squared | \(0.050689424924\) | \(0.214804676794\) |
+| covariance \(L^2\) constant | \(0.225143120979\) | \(0.463470254487\) |
+
+The rooted operator norm is larger by a factor \(2.05289554977\), and the squared covariance constant is larger by a factor \(4.23766253249\), than their shifted-core counterparts.  Reflection placement and the no-\(O(g)\) Jacobian result survive, but the numerical density budget must be rebaselined.  These finite checks support the implementation of the gauge-covariant rooted coordinate; they do not prove an exact nonlinear shell theorem, good-sector bounds, or exceptional-sector estimates.
+
+## 8. Relation to the larger constructive route
+
+The rooted coordinate is intended for possible use in a later one-shell constructive analysis.  The distinction exposed in Section 7 matters there: a calculation on the eight-edge shifted cores is not a calculation on the gauge-covariant rooted loops.
+
+With the rooted constants, the finite centered covariance class remains summable under the same conditional centering hypothesis, but with the larger value \(0.214804676794\).  At the same time, the conservative rooted chart bound no longer closes at the originally chosen starting scale \(j_0=13082\).  In the present estimates, the adapted truncated bound first closes only near \(j=58443\).  Thus the rooted repair is a valid finite coordinate repair, but it is not by itself a completed one-shell estimate.
+
+These downstream facts do not strengthen the finite theorem, but they explain why shifted-core and rooted objects must remain distinct before any multiscale claim is made.  In particular, the present paper does not claim:
+
+- an exact one-shell theorem;
+- a deterministic compact-log remainder theorem;
+- compatibility of the rooted package with the current shell schedule;
+- exceptional-sector control;
+- continuum Yang--Mills construction;
+- a mass gap.
+
+## 9. Open problems
+
+The finite-block repair leaves several major questions open:
+
+1. deterministic compact-log good-sector bounds;
+2. singular-stratum and near-Cartan estimates;
+3. chart/large-field exceptional-sector summability;
+4. exact nonlinear one-shell disintegration/Radon--Nikodym theorem;
+5. continuum limit;
+6. Yang--Mills mass gap.
+
+These problems are not addressed here.
+
+## 10. Reproducibility appendix
+
+The reproducibility specification and control protocol are:
+
+- `papers/c5x-reproducibility-package.md`;
+- `papers/c5x-verification-control-protocol.md`.
+
+Reproducibility resources:
+
+| internal label | script | report |
+|---|---|---|
+| exact certificates | `calculations/c5x_exact_finite_claim_certificates.py` | `outputs/c5x_exact_finite_claim_certificates.json` |
+| C5AX | `calculations/c5ax_reflection_retained_density.py` | `outputs/clean-start-c5ax-reflection-retained-density.md` |
+| C5AY | `calculations/c5ay_reflection_covariant_retained_coordinates.py` | `outputs/clean-start-c5ay-reflection-covariant-retained-coordinates.md` |
+| C5AZ | `calculations/c5az_shifted_coordinate_package_regression.py` | `outputs/clean-start-c5az-shifted-coordinate-package-regression.md` |
+
+The one-command reproduction script records the runtime environment, checks native exit codes, asserts expected decisions and rooted object identity, computes the transitive local Python import closure, and writes a project-relative SHA256 manifest.
+
+Reproducibility controls:
+
+| item | status |
+|---|---|
+| one-command reproduction script | done |
+| runtime fallback note | done |
+| latest rerun folder | `outputs/c5x-reproducibility-rerun/` |
+| latest SHA256 manifest | `outputs/c5x-reproducibility-rerun/sha256_manifest.txt` |
+| rooted path hash/inventory assertion | passed |
+| shifted-core versus rooted constant assertion | passed; old constants explicitly not preserved |
+| C5BA--C5BI correction-chain assertions | passed with `-IncludeDownstream` |
+| transitive local Python dependencies | 30 |
+
+The manifest is not copied into the prose because it changes whenever a controlled source changes.  The authoritative records are `outputs/c5x-reproducibility-rerun/manifest.json` and `sha256_manifest.txt`; every listed file path is relative to the project root.
+
+The reproduction run verifies the intended finite-block pattern:
+
+- C5AX: the linear quotient reflection implementation is roundoff-correct, while the original based finite-\(g\) retained log has a visible nonlinear reflection defect;
+- C5AY: uniform cyclic shifts \(1\) and \(5\) are exact; the paper uses shift \(1\), giving 12 same-order and 12 exact-inverse reflected paths with no unmatched shifted paths;
+- C5AZ: rooted gauge covariance and reflection residuals are at roundoff scale, the rooted density is recomputed, and preservation of the shifted-core constants is explicitly false.
+
+### Main-text versus appendix table policy
+
+For readability, the main text reports only the decisive finite-block tables: the linear quotient residual summary, the original finite-\(g\) obstruction witness, the valid-shift/ordered-path closure table, the shifted finite-\(g\) equivariance table, and the rooted common-stem path/group residual summaries.
+
+Long density-operator rows and full verification outputs are recorded in the reproducibility appendix and reproduction reports.  This keeps the manuscript readable while preserving the exact numerical trail.
+
+The numerical residuals certify finite-block implementation and verification checks.  The formal lemmas and propositions carry the mathematical claims.
+
+## 11. Relation to primary-source literature
+
+The separate audit file `papers/c5x-literature-audit-plan.md` records access level and portions inspected.  The sources closest to the present paper are Osterwalder--Schrader reconstruction and reflection positivity, Osterwalder--Seiler lattice gauge positivity, Wilson's lattice gauge formulation, loop-variable work, and path-gauge or maximal-tree formulations of nonabelian lattice gauge fields.
+
+Two prior-art findings materially narrow the wording.  Batrouni's path gauge already chooses an origin and paths to lattice sites, and its nonabelian Bianchi identity uses ordered parallel-transport connectors.  Burbano and Bauer's maximal-tree construction gives unique paths, closes all remaining loops at one origin, retains one simultaneous \(SU(2)\) conjugation there, and explicitly uses petal/stem language.  Common roots, stems, and simultaneous root conjugation are therefore not new contributions of this paper.
+
+The following background list records the wider citation context; exact access labels and page-level notes are in the audit file.
+
+| source | what it anchors | implication for this paper |
+|---|---|---|
+| K. Osterwalder and R. Schrader, *Axioms for Euclidean Green's functions*, Comm. Math. Phys. 31, 83--112 (1973), DOI `10.1007/BF01645738` | Euclidean reconstruction framework and reflection positivity as a structural positivity condition | OS positivity motivates reflection compatibility, but the present finite-block result is not an OS reconstruction theorem or a Hilbert-space construction. |
+| K. Osterwalder and R. Schrader, *Axioms for Euclidean Green's functions II*, Comm. Math. Phys. 42, 281--305 (1975), DOI `10.1007/BF01608978` | corrected/extended OS reconstruction conditions | Finite-block coordinate covariance alone does not imply continuum reconstruction. |
+| K. Osterwalder and E. Seiler, *Gauge field theories on a lattice*, Ann. Phys. 110, 440--471 (1978), DOI `10.1016/0003-4916(78)90039-8` | reflection/physical positivity and transfer-matrix structure for lattice gauge approximations | Reflection positivity for suitable lattice gauge actions is standard background; this paper concerns a coordinate-placement compatibility issue, not a new lattice positivity theorem. |
+| K. G. Wilson, *Confinement of quarks*, Phys. Rev. D 10, 2445--2459 (1974), DOI `10.1103/PhysRevD.10.2445`; see also Wilson's retrospective `arXiv:hep-lat/0412043` | Wilson lattice gauge variables and Wilson-loop action background | Wilson loops/traces are standard.  The paper's distinction is between trace/conjugacy variables and based Lie-algebra logs in one finite retained-coordinate package. |
+| J. Kogut and L. Susskind, *Hamiltonian formulation of Wilson's lattice gauge theories*, Phys. Rev. D 11, 395--408 (1975), DOI `10.1103/PhysRevD.11.395` | group-valued link variables and gauge-theory lattice Hamiltonian context | The paper's link and path conventions are standard lattice-gauge bookkeeping, specialized to a finite \(n=2\) block. |
+| S. Mandelstam, *Feynman rules for electromagnetic and Yang--Mills fields from the gauge-independent field-theoretic formalism*, Phys. Rev. 175, 1580--1604 (1968), DOI `10.1103/PhysRev.175.1580` | loop variables and gauge-invariant loop formalism | Trace/conjugacy behavior is standard nonabelian loop-variable behavior, not a new observation of this paper. |
+| R. Giles, *Reconstruction of gauge potentials from Wilson loops*, Phys. Rev. D 24, 2160--2168 (1981), DOI `10.1103/PhysRevD.24.2160` | Wilson-loop reconstruction/gauge-invariant loop data context | Wilson loops are not deficient generally; the issue here is that trace variables are not the oriented based-log retained coordinates used in this finite route. |
+| M. Lüscher, *Topology of lattice gauge fields*, Comm. Math. Phys. 85, 39--48 (1982), DOI `10.1007/BF02029132` | local lattice gauge fields under small-action/small-field hypotheses and compact group care | The principal-log chart used here is local and finite-block; global compact-gauge and continuum topological claims are outside scope. |
+
+### Consequence for the present paper
+
+The standard literature already supplies reflection positivity/reconstruction language, lattice gauge link and plaquette variables, common-origin path gauges and maximal-tree loops, nonabelian Bianchi connectors, stems, Wilson loops, and trace/conjugacy invariance.  The paper's contribution is therefore narrower:
+
+> in the explicitly defined \(n=2\), \(4D\), \(SU(2)\) retained block, the original path convention has an exact retained quadratic BCH obstruction under reflection; the exact uniform repair shifts are \(1\) and \(5\), and the shift-\(1\) loops admit the stated reflection-compatible canonical stems.
+
+No stronger novelty claim is justified, and the common-stem idea itself is not claimed as new.  The present paper also does not claim priority over the constructive RG literature; its contribution is restricted to the explicit fixed-block obstruction and repair stated above.
+
+### Terminology
+
+Throughout this paper, "reflection compatibility" refers to the finite coordinate property, while "reflection positivity" is reserved for positivity of measures/forms or reconstruction hypotheses.  Likewise, "Wilson trace" or "conjugacy-class variable" is used when the trace is intended, and "based holonomy-log coordinate" is used when the basepoint and color frame matter.
+
+## 12. Conclusion
+
+The original ordered based-log coordinate has the correct 17-dimensional tangent retained space but an exact nonzero quadratic reflection defect.  The defect comes from inverse-cyclic rebasing of the time-containing loops.  Uniform shifts \(1\) and \(5\), and only those shifts, convert the reflected words into exact same/inverse words.  For shift \(1\), canonical stems from the fixed root put all holonomies in one gauge-covariant color frame without spoiling reflection closure.
+
+The rooted construction is not numerically identical to its shifted core: it touches more links and has larger density constants.  Keeping those objects distinct is part of the result and is necessary before any later multiscale use.  Nothing proved here supplies continuum existence, confinement, clustering, or a mass gap.
+
+## References
+
+1. K. Osterwalder and R. Schrader, *Axioms for Euclidean Green's functions*, Communications in Mathematical Physics **31**, 83--112 (1973), DOI `10.1007/BF01645738`.
+
+2. K. Osterwalder and R. Schrader, *Axioms for Euclidean Green's functions II*, Communications in Mathematical Physics **42**, 281--305 (1975), DOI `10.1007/BF01608978`.
+
+3. K. Osterwalder and E. Seiler, *Gauge field theories on a lattice*, Annals of Physics **110**, 440--471 (1978), DOI `10.1016/0003-4916(78)90039-8`.
+
+4. K. G. Wilson, *Confinement of quarks*, Physical Review D **10**, 2445--2459 (1974), DOI `10.1103/PhysRevD.10.2445`.
+
+5. K. G. Wilson, *The origins of lattice gauge theory*, Nuclear Physics B Proceedings Supplements **140**, 3--19 (2005), arXiv:`hep-lat/0412043`.
+
+6. J. Kogut and L. Susskind, *Hamiltonian formulation of Wilson's lattice gauge theories*, Physical Review D **11**, 395--408 (1975), DOI `10.1103/PhysRevD.11.395`.
+
+7. S. Mandelstam, *Feynman rules for electromagnetic and Yang--Mills fields from the gauge-independent field-theoretic formalism*, Physical Review **175**, 1580--1604 (1968), DOI `10.1103/PhysRev.175.1580`.
+
+8. R. Giles, *Reconstruction of gauge potentials from Wilson loops*, Physical Review D **24**, 2160--2168 (1981), DOI `10.1103/PhysRevD.24.2160`.
+
+9. M. Lüscher, *Topology of lattice gauge fields*, Communications in Mathematical Physics **85**, 39--48 (1982), DOI `10.1007/BF02029132`.
+
+10. G. G. Batrouni, *Plaquette formulation and the Bianchi identity for lattice gauge theories*, Nuclear Physics B **208**, 467--483 (1982), DOI `10.1016/0550-3213(82)90231-0`.
+
+11. I. M. Burbano and C. W. Bauer, *Gauge loop-string-hadron formulation on general graphs and applications to fully gauge fixed Hamiltonian lattice gauge theory*, arXiv:`2409.13812`.
+
+12. T. Balaban, *Averaging operations for lattice gauge theories*, Communications in Mathematical Physics **98**, 17--51 (1985), DOI `10.1007/BF01211042`.
+
+13. T. Balaban, *The variational problem and background fields in renormalization group method for lattice gauge theories*, Communications in Mathematical Physics **102**, 277--309 (1985), DOI `10.1007/BF01229381`.
+
+14. T. Balaban, *Renormalization group approach to lattice gauge field theories I*, Communications in Mathematical Physics **109**, 249--301 (1987), DOI `10.1007/BF01215223`.
+
+## Declarations
+
+### Funding
+
+The author declares that no external funding was received for this work.
+
+### Competing interests
+
+The author declares no competing interests.
+
+### Code and reproducibility availability
+
+The finite-dimensional verification scripts, wrapper, manifest structure, and numerical-result explanations are prepared as supplementary material.  A public repository release should be finalized before journal submission, preferably at `https://github.com/Gratchia/yang-mills-paper1-reproducibility`, and the final manuscript should cite the exact release URL or archival DOI.
+
+### AI-assisted work disclosure
+
+OpenAI ChatGPT/Codex was used as an assistive tool for manuscript drafting, style revision, mathematical auditing, code generation, finite-dimensional numerical checks, and packaging.  The author remains responsible for the paper's claims, proofs, computations, citations, disclosures, and submission decisions.

@@ -1,0 +1,77 @@
+{
+  "checkpoint": "C5X-EXACT",
+  "title": "exact finite claim certificates",
+  "certificate": {
+    "raw_face_rows": 24,
+    "raw_face_rank_over_q": 17,
+    "exact_bianchi_relation_count": 7,
+    "original_same_order_paths": 12,
+    "original_inverse_cyclic_paths": 12,
+    "original_inverse_cyclic_shift": 6,
+    "valid_exact_uniform_shifts": [
+      1,
+      5
+    ],
+    "witness_edge_one": 0,
+    "witness_edge_two": 2,
+    "witness_nonzero_defect_rows": [
+      [
+        8,
+        [
+          0,
+          0,
+          -2
+        ]
+      ]
+    ],
+    "witness_nonzero_rt_defect_entries": [
+      [
+        0,
+        2,
+        -2
+      ],
+      [
+        2,
+        2,
+        2
+      ],
+      [
+        27,
+        2,
+        -2
+      ],
+      [
+        29,
+        2,
+        2
+      ],
+      [
+        162,
+        2,
+        2
+      ],
+      [
+        163,
+        2,
+        2
+      ],
+      [
+        198,
+        2,
+        -2
+      ],
+      [
+        199,
+        2,
+        -2
+      ]
+    ],
+    "rooted_path_count": 24,
+    "rooted_min_segments": 8,
+    "rooted_max_segments": 16,
+    "rooted_mean_segments": 13.0,
+    "rooted_unique_edges": 84,
+    "rooted_path_word_sha256": "1EB6E829D66DCDFA6E12E18CACA3C09A3EDFC3EA56E7EBE0D7ED1E05CA01616C",
+    "all_exact_gates_pass": true
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "checkpoint": "C5BD",
+  "title": "analytic rooted Radon--Nikodym coefficient formulas",
+  "report": {
+    "seed": 20260705,
+    "tol": 1e-10,
+    "retained_radius": 0.18,
+    "gaussian_scale": 0.12,
+    "derivative_step": 1e-06,
+    "chunk_scalar": 16,
+    "cyclic_path_shift": 1,
+    "retained_rank": 17,
+    "positive_high_rank": 119,
+    "gauge_vertex_rank": 80,
+    "retained_color_dim": 51,
+    "positive_high_color_dim": 357,
+    "gauge_color_dim": 240,
+    "rooted_path_count": 24,
+    "rooted_min_segments": 8,
+    "rooted_max_segments": 16,
+    "rooted_unique_edges": 84,
+    "rooted_path_word_sha256": "1EB6E829D66DCDFA6E12E18CACA3C09A3EDFC3EA56E7EBE0D7ED1E05CA01616C",
+    "density_sources_quadratic_in_A": true,
+    "even_centered_zero_by_degree": true,
+    "odd_channel_bilinear_by_degree": true,
+    "reference_odd_conditional_mean_zero": true,
+    "exact_compact_conditional_mean_zero_proved": false,
+    "max_abs_even_unit_coeff": 0.0,
+    "combined_odd_unit_coeff_from_source_split": -0.2384644069588409,
+    "combined_odd_unit_coeff_from_matrix": -0.2384644069588409,
+    "source_split_vs_matrix_abs_error": 0.0,
+    "combined_operator_norm": 1.0189627218075927,
+    "combined_covariance_l2_constant_squared": 0.21480467679414722,
+    "combined_covariance_l2_constant": 0.463470254486895,
+    "rooted_covariance_reference_squared": 0.21480467679414722,
+    "rooted_covariance_reference_abs_error": 0.0,
+    "rooted_operator_reference": 1.0189627218075927,
+    "rooted_operator_reference_abs_error": 0.0,
+    "centered_second_cumulant_unit_proxy": 0.21480467679414722,
+    "residual_partial_100j0": 0.45619655606640896,
+    "residual_tail_after_100j0": 0.009606301607646323,
+    "forbidden_uncentered_partial_100j0": 186.47318860001135,
+    "retained_reconstruction_error_max": 1.1290419987399058e-10,
+    "fp_m0_base_relative_error_max": 1.098693590834956e-11,
+    "fp_m0_min_singular": 0.9999999999883326,
+    "fp_m0_condition": 12.000000000157014,
+    "retained_reflection_leak": 5.954688069283321e-14,
+    "positive_reflection_leak": 1.54801643394982e-15,
+    "retained_operator_reflection_residual": 3.075868548876242e-14,
+    "haar_operator_reflection_residual": 5.766449956032815e-14,
+    "fp_operator_reflection_residual": 4.549787465872453e-14,
+    "combined_operator_reflection_residual": 3.2134308829666186e-14,
+    "positive_covariance_reflection_commutator": 4.348005212820758e-15,
+    "classification": "partial pass: rooted analytic g=0 source formulas reproduce the rooted odd bilinear operator and remove the even centered channel by degree; exact compact centering and uniform good-sector bounds remain open"
+  },
+  "analytic_component_rows": [
+    {
+      "source": "retained",
+      "o2_source_formula": "1/2[tr J2 - 1/2 tr(J1^2)]",
+      "even_centered_formula": "0 by quadratic degree in A=K+H",
+      "odd_centered_formula": "K^T M_source H",
+      "exact_even_centered_unit_coeff": 0.0,
+      "sampled_odd_unit_coeff_from_matrix": -0.19775304465162277,
+      "one_point_o2_half_density_coeff": -0.05841629568931647
+    },
+    {
+      "source": "Haar half",
+      "o2_source_formula": "-||A||^2/24",
+      "even_centered_formula": "0 by quadratic degree in A=K+H",
+      "odd_centered_formula": "K^T M_source H",
+      "exact_even_centered_unit_coeff": 0.0,
+      "sampled_odd_unit_coeff_from_matrix": -0.01789407648524625,
+      "one_point_o2_half_density_coeff": -0.03806743310060146
+    },
+    {
+      "source": "FP half",
+      "o2_source_formula": "1/2[tr(M0^{-1}M2)-1/2 tr((M0^{-1}M1)^2)]",
+      "even_centered_formula": "0 by quadratic degree in A=K+H",
+      "odd_centered_formula": "K^T M_source H",
+      "exact_even_centered_unit_coeff": 0.0,
+      "sampled_odd_unit_coeff_from_matrix": -0.022817285821971903,
+      "one_point_o2_half_density_coeff": -0.040061603343230834
+    },
+    {
+      "source": "combined",
+      "o2_source_formula": "sum of retained + Haar half + FP half",
+      "even_centered_formula": "0 by quadratic degree in A=K+H",
+      "odd_centered_formula": "K^T M_source H",
+      "exact_even_centered_unit_coeff": 0.0,
+      "sampled_odd_unit_coeff_from_matrix": -0.2384644069588409,
+      "one_point_o2_half_density_coeff": -0.13654533213314876
+    }
+  ],
+  "matrix_component_rows": [
+    {
+      "source": "retained",
+      "operator_norm": 0.9538604287440964,
+      "frobenius_norm": 2.7115211997029696,
+      "covariance_l2_constant_squared": 0.18253523647003583,
+      "covariance_l2_constant": 0.42724142644415447,
+      "sampled_raw_odd": -0.004271465764475051,
+      "sampled_unit_odd_coeff": -0.19775304465162277
+    },
+    {
+      "source": "Haar half",
+      "operator_norm": 0.0573350763461486,
+      "frobenius_norm": 0.2773975043343286,
+      "covariance_l2_constant_squared": 0.0008976887675112572,
+      "covariance_l2_constant": 0.029961454696180178,
+      "sampled_raw_odd": -0.000386512052081319,
+      "sampled_unit_odd_coeff": -0.01789407648524625
+    },
+    {
+      "source": "FP half",
+      "operator_norm": 0.07197095583538919,
+      "frobenius_norm": 0.3470661939881091,
+      "covariance_l2_constant_squared": 0.0013934838755697183,
+      "covariance_l2_constant": 0.03732939693552145,
+      "sampled_raw_odd": -0.000492853373754593,
+      "sampled_unit_odd_coeff": -0.022817285821971903
+    },
+    {
+      "source": "combined",
+      "operator_norm": 1.0189627218075927,
+      "frobenius_norm": 2.930292475128452,
+      "covariance_l2_constant_squared": 0.21480467679414722,
+      "covariance_l2_constant": 0.463470254486895,
+      "sampled_raw_odd": -0.005150831190310963,
+      "sampled_unit_odd_coeff": -0.2384644069588409
+    }
+  ],
+  "theorem_debts": [
+    {
+      "label": "BD1 exact compact centering",
+      "formula_level_result": "the rooted analytic source is odd bilinear in the centered high variable",
+      "missing_theorem": "prove the true compact conditional law preserves the required H -> -H centering/parity, not only the tangent Gaussian reference",
+      "failure_trigger": "a nonzero compact conditional odd mean reactivates the forbidden O(g_j^2 M_j^2) drift"
+    },
+    {
+      "label": "BD2 uniform rooted RN expansion",
+      "formula_level_result": "finite n=2 source formulas identify retained, Haar, and FP O(g^2) coefficients",
+      "missing_theorem": "prove a uniform compact-link RN expansion with controlled R_ge3 over the C5M good sector",
+      "failure_trigger": "third and higher terms fail to gain a summable scale power or chart constants grow with scale"
+    },
+    {
+      "label": "BD3 normalized slot matching",
+      "formula_level_result": "even centered K^2H^2 source vanishes by degree and odd centered source is assigned to a second-cumulant budget",
+      "missing_theorem": "prove every even/vacuum/retained O(g^2) term is placed in C5BA action/density/comparison slots",
+      "failure_trigger": "an unmatched O(g^2) local retained density/action term survives as residual"
+    },
+    {
+      "label": "BD4 strata and exceptions",
+      "formula_level_result": "finite source formulas are regular in the sampled tangent sector",
+      "missing_theorem": "add singular-stratum, near-Cartan, large-field, and chart-failure bounds",
+      "failure_trigger": "near-Cartan or chart-exception probability is nonsummable or the Jacobian degenerates"
+    }
+  ],
+  "decision": {
+    "analytic_rooted_source_formulas_implemented": true,
+    "even_channel_removed": true,
+    "rooted_odd_matrix_matches_source_split": true,
+    "finite_reflection_placement_passes": true,
+    "exact_compact_conditional_centering_proved": false,
+    "uniform_good_sector_theorem_proved": false,
+    "status": "partial pass: analytic rooted finite-block formulas identify the O(g^2) density source, remove the even centered channel, and match the rooted odd bilinear operator; compact conditional centering and uniform estimates remain theorem debts",
+    "next_checkpoint": "C5BE: exact compact conditional centering criterion and uniform good-sector RN remainder contract",
+    "reason": "C5BD upgrades C5BC's finite +/-g extraction to g=0 source formulas. The formulas still live on the finite tangent/good-sector chart, so the next obstruction is proving the same centering and remainder control for the exact compact conditional kernel."
+  }
+}

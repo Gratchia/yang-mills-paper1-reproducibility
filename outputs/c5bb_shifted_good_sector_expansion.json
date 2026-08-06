@@ -1,0 +1,220 @@
+{
+  "checkpoint": "C5BB",
+  "title": "shifted good-sector one-shell expansion diagnostic",
+  "constants": {
+    "rooted_op_norm": 1.0189627218075927,
+    "rooted_cov_sq": 0.21480467679414722,
+    "rooted_cov": 0.463470254486895,
+    "old_cov_sq": 0.0315650978782,
+    "rooted_to_old_cov_ratio": 6.80513260636835,
+    "j0": 13082,
+    "mu": 16.0
+  },
+  "tangent_split_check": {
+    "retained_scalar_rank": 17,
+    "positive_high_scalar_rank": 119,
+    "gauge_vertex_scalar_rank": 80,
+    "total_scalar_rank": 216,
+    "retained_color_dim": 51,
+    "positive_high_color_dim": 357,
+    "gauge_color_dim": 240,
+    "total_color_dim": 648,
+    "dimension_closure": true,
+    "root_vertex": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "root_reflection_fixed": true,
+    "loop_unmatched_reflections": 0,
+    "stem_unmatched_reflections": 0,
+    "rooted_path_unmatched_reflections": 0,
+    "finite_rooted_reflection_covariant": true,
+    "finite_rooted_gauge_covariant": true,
+    "max_rooted_gauge_covariance_residual": 1.27373599508e-15,
+    "max_rooted_reflection_residual": 7.52989890787e-16
+  },
+  "expansion_clauses": [
+    {
+      "label": "BB1 rooted chart and K/H split",
+      "statement": "On the good sector, the rooted common-stem holonomy-log variables and positive-high coordinates must give a controlled local chart modulo gauge.",
+      "finite_or_formal_evidence": "C5AL gives the tangent high/gauge split; C5AZ gives finite rooted gauge and reflection covariance.",
+      "good_sector_status": "finite tangent pass; nonlinear compact uniformity open",
+      "required_next_lemma": "uniform inverse-function/disintegration lemma in rooted coordinates",
+      "failure_trigger": "chart derivative loses invertibility or constants grow with the UV cutoff/good-sector radius"
+    },
+    {
+      "label": "BB2 conditional RN expansion",
+      "statement": "The conditional high measure at fixed shifted K must have an RN expansion g X1 + g^2 X2 + R_ge3 with a summable good-sector remainder.",
+      "finite_or_formal_evidence": "C5AJ fixes the cumulant algebra; C5T-C5X provide finite BCH/action inputs.",
+      "good_sector_status": "formal coefficient algebra pass; exact compact shell expansion open",
+      "required_next_lemma": "analytic RN expansion through O(g^2) with explicit shifted coordinate/density terms",
+      "failure_trigger": "nonanalytic compact effects or uncontrolled Jacobian terms enter at O(g) or O(g^2)"
+    },
+    {
+      "label": "BB3 O(g) placement",
+      "statement": "The O(g) retained cubic must be exact retained coordinate/action data, and high-mode O(g) tadpoles must be centered.",
+      "finite_or_formal_evidence": "C5AD places retained S1; C5W centers the high-mode cubic in the Gaussian reference.",
+      "good_sector_status": "finite/formal pass; exact shifted conditional centering open",
+      "required_next_lemma": "prove no shifted conditional O(g) tadpole survives outside retained data",
+      "failure_trigger": "an unretained O(g_j M_j^p) mean appears in the exact conditional shell"
+    },
+    {
+      "label": "BB4 O(g^2) slot matching",
+      "statement": "Every O(g^2) local output must match V_RP, V_comp, or J_shifted^{1/2}; none may remain residual.",
+      "finite_or_formal_evidence": "C5AI/C5BA show no known unmatched finite-block O(g^2) survivor.",
+      "good_sector_status": "ledger pass; exact coefficient theorem open",
+      "required_next_lemma": "compute exact shifted O(g^2) coefficient map and compare to normalized slots",
+      "failure_trigger": "any nonlocal, gauge-variant, OS-incompatible, or unmatched O(g^2) output remains"
+    },
+    {
+      "label": "BB5 centered odd density",
+      "statement": "The shifted odd K/H density channel must have zero conditional mean so its first effect is a second cumulant.",
+      "finite_or_formal_evidence": "C5AV gives degree/oddness; C5AZ restores reflection placement; C5BA supplies shifted constant.",
+      "good_sector_status": "reference Gaussian centering pass; exact conditional centering open",
+      "required_next_lemma": "prove the shifted bilinear odd channel has zero mean under the exact conditional reference",
+      "failure_trigger": "a nonzero O(g_j^2 M_j^2) density drift appears from the odd channel"
+    },
+    {
+      "label": "BB6 rooted covariance envelope",
+      "statement": "The centered odd channel must satisfy an L2 envelope controlled by C_cov,shifted^2, or a replacement constant with the same summability class.",
+      "finite_or_formal_evidence": "Corrected C5AZ/C5BA give C_cov,rooted^2=0.214804676794, and the O(g_j^4 M_j^4) budget is summable.",
+      "good_sector_status": "finite-block bound pass; uniform good-sector and quasilocality open",
+      "required_next_lemma": "prove a deterministic shifted L2 bound stable under the exact shell disintegration",
+      "failure_trigger": "the covariance constant is nonlocal, cutoff-growing, or couples to exceptional near-Cartan valleys"
+    },
+    {
+      "label": "BB7 exceptional sector",
+      "statement": "Chart failures, large fields, and near-Cartan coherent valleys must have summable cost or be retained.",
+      "finite_or_formal_evidence": "C5M gives a schedule; C5N gives a finite normal-form tail only in a restricted model.",
+      "good_sector_status": "open high-risk theorem clause",
+      "required_next_lemma": "prove local Wilson-action/FP/chart exceptional estimates for the shifted coordinate package",
+      "failure_trigger": "exceptional probability or comparison-form defect is not summable over shells"
+    }
+  ],
+  "slot_checks": [
+    {
+      "slot": "shifted retained cubic S1",
+      "formal_order": "O(g_j M_j^3)",
+      "required_treatment": "exact retained coordinate/action data",
+      "shifted_status": "carried from C5AD into shifted variables",
+      "exact_good_sector_status": "not yet proved in full compact disintegration",
+      "residual_allowed": false,
+      "failure_trigger": "unretained cubic residual or conditional O(g) tadpole"
+    },
+    {
+      "slot": "quadratic RP running action",
+      "formal_order": "O(g_j^2 M_j^2)",
+      "required_treatment": "reflection-symmetric Wilson plaquette-coupling update",
+      "shifted_status": "compatible at tangent/package level",
+      "exact_good_sector_status": "nonlinear positivity/RP placement still open",
+      "residual_allowed": false,
+      "failure_trigger": "unmatched quadratic drift or negative/non-RP running term"
+    },
+    {
+      "slot": "quartic comparison potential Phi4",
+      "formal_order": "O(g_j^2 M_j^4)",
+      "required_treatment": "C5K comparison potential with controlled defect",
+      "shifted_status": "unchanged by shifted coordinate contract",
+      "exact_good_sector_status": "comparison defect theorem open",
+      "residual_allowed": false,
+      "failure_trigger": "quartic term left as raw residual or non-summable comparison defect"
+    },
+    {
+      "slot": "shifted OS half-density rho2",
+      "formal_order": "O(g_j^2 M_j^2)",
+      "required_treatment": "exact shifted half-density/running density",
+      "shifted_status": "finite reflection placement repaired by C5AY/C5AZ",
+      "exact_good_sector_status": "quasilocal conditional density theorem open",
+      "residual_allowed": false,
+      "failure_trigger": "nonlocal or uncentered density drift outside J_j^{1/2,shifted}"
+    },
+    {
+      "slot": "centered shifted odd density channel",
+      "formal_order": "O(g_j^4 M_j^4) after centering",
+      "required_treatment": "summable second-cumulant residual",
+      "shifted_status": "finite L2 constant available and reflection-compatible",
+      "exact_good_sector_status": "exact conditional centering and uniform covariance bound open",
+      "residual_allowed": true,
+      "failure_trigger": "failure of centering converts it back to forbidden O(g_j^2 M_j^2)"
+    },
+    {
+      "slot": "post-retention shifted remainder",
+      "formal_order": "O(g_j^{2+delta}P(M_j)) or better",
+      "required_treatment": "C4 summable residual/error budget",
+      "shifted_status": "allowed by C5BA only after all O(g)/O(g^2) slots are removed",
+      "exact_good_sector_status": "not proved",
+      "residual_allowed": true,
+      "failure_trigger": "any residual lacks scale gain, quasilocal decay, or summable exceptional control"
+    }
+  ],
+  "residual_gates": [
+    {
+      "name": "forbidden if odd centering fails",
+      "model_term": "O(g_j^2 M_j^2)",
+      "unit_bound": 0.21480467679414722,
+      "partial_10j0": 84.1264887164252,
+      "partial_100j0": 186.47318860001602,
+      "tail_after_100j0": null,
+      "summable": false,
+      "gate": "FAIL",
+      "meaning": "A nonzero mean of the shifted odd density channel is a nonsummable O(g^2) drift."
+    },
+    {
+      "name": "allowed centered shifted odd variance",
+      "model_term": "O(g_j^4 M_j^4)",
+      "unit_bound": 0.21480467679414722,
+      "partial_10j0": 0.39671088919525677,
+      "partial_100j0": 0.45619655606640613,
+      "tail_after_100j0": 0.009606301607646323,
+      "summable": true,
+      "gate": "PASS IF CENTERED",
+      "meaning": "The second-cumulant class is summable once exact centering is established."
+    },
+    {
+      "name": "allowed post-retention cubic-gain class",
+      "model_term": "O(g_j^3 M_j^6)",
+      "unit_bound": 0.0280541227163,
+      "partial_10j0": 1569.7340515252642,
+      "partial_100j0": 2470.1176879686386,
+      "tail_after_100j0": 878.0710382625783,
+      "summable": true,
+      "gate": "PASS WITH PROOF",
+      "meaning": "Summable by scale power, though constants are not automatically small."
+    },
+    {
+      "name": "allowed post-retention quartic-gain class",
+      "model_term": "O(g_j^4 M_j^8)",
+      "unit_bound": 0.0280541227163,
+      "partial_10j0": 1409.926876397067,
+      "partial_100j0": 1725.499978320808,
+      "tail_after_100j0": 74.8599521575672,
+      "summable": true,
+      "gate": "PASS WITH PROOF",
+      "meaning": "Summable by scale power, but log powers and comparison constants matter."
+    }
+  ],
+  "centering_ledger": {
+    "density_source_degree": "quadratic in A=K+H at analytic O(g^2)",
+    "even_centered_channel": "vanishes by degree",
+    "odd_channel_form": "B_shifted(K,H)=K^T M_odd^shifted H",
+    "reference_conditional_mean_zero": true,
+    "exact_conditional_mean_zero_proved": false,
+    "variance_unit_bound": 0.21480467679414722,
+    "conservative_log_cumulant_unit_bound": 0.21480467679414722,
+    "residual_model": "O(g_j^4 M_j^4) after exact centering",
+    "shifted_partial_100j0": 0.45619655606640613,
+    "shifted_tail_after_100j0": 0.009606301607646323,
+    "failure_trigger": "If E_H B_shifted(K,H) is nonzero at O(1), it creates a forbidden O(g_j^2 M_j^2) density drift."
+  },
+  "decision": {
+    "finite_rooted_split_passes": true,
+    "reference_centering_passes": true,
+    "no_known_unmatched_o1_o2_survivor": true,
+    "exact_good_sector_expansion_proved": false,
+    "status": "partial pass: finite shifted algebra and reference centering pass; exact good-sector theorem remains open",
+    "next_checkpoint": "C5BC: shifted disintegration/RN expansion lemma. Build the actual good-sector map (K,H)->links in rooted variables and prove/falsify uniform invertibility plus the O(g^2) RN expansion.",
+    "reason": "C5BB finds no new finite-block O(g) or O(g^2) survivor after the C5AZ shift. The centered odd channel is summable in the rooted covariance model, but only under exact centering. The unproved burden is now concentrated in the nonlinear compact good-sector disintegration and RN expansion."
+  }
+}

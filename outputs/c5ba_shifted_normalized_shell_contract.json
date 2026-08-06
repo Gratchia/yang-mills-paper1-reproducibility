@@ -1,0 +1,192 @@
+{
+  "checkpoint": "C5BA",
+  "title": "shifted normalized one-shell theorem contract",
+  "constants": {
+    "rooted_op_norm": 1.0189627218075927,
+    "rooted_cov_sq": 0.21480467679414722,
+    "rooted_cov": 0.463470254486895,
+    "j0": 13082,
+    "mu": 16.0
+  },
+  "package_components": [
+    {
+      "name": "rooted common-stem retained coordinate K_g^root",
+      "shifted_status": "fixed by C5AY/C5AZ finite-block construction",
+      "formal_size": "coordinate, not residual",
+      "theorem_role": "retained 17-dimensional tangent quotient with reflection-covariant rooted paths",
+      "may_remain_as_residual": false,
+      "open_debt": "prove exact one-shell disintegration and good-sector uniformity in the rooted chart"
+    },
+    {
+      "name": "retained cubic S1",
+      "shifted_status": "must be expressed in shifted holonomy-log coordinates",
+      "formal_size": "O(g_j M_j^3)",
+      "theorem_role": "main odd retained interaction; cannot be discarded shell-by-shell",
+      "may_remain_as_residual": false,
+      "open_debt": "show it is placed in the retained local coordinate/action package with correct reflection parity"
+    },
+    {
+      "name": "running quadratic/RP action",
+      "shifted_status": "must be transported to the shifted coordinate basis",
+      "formal_size": "O(g_j^2 M_j^2)",
+      "theorem_role": "renormalized quadratic contribution, part of the one-shell comparison action",
+      "may_remain_as_residual": false,
+      "open_debt": "prove reflection-positive placement without producing an unmatched boundary defect"
+    },
+    {
+      "name": "closed-loop quartic comparison potential Phi4",
+      "shifted_status": "must be kept as a comparison-potential term, not a residual",
+      "formal_size": "O(g_j^2 M_j^4)",
+      "theorem_role": "absorbs the dangerous local quartic sector",
+      "may_remain_as_residual": false,
+      "open_debt": "prove shifted-coordinate compatibility and quantify comparison-potential defect"
+    },
+    {
+      "name": "shifted OS half-density rho2",
+      "shifted_status": "finite-block reflection residual killed by C5AY/C5AZ",
+      "formal_size": "O(g_j^2 M_j^2)",
+      "theorem_role": "Jacobian/conditional-density correction inside the retained package",
+      "may_remain_as_residual": false,
+      "open_debt": "prove cutoff-stable conditional density control in the physical shell"
+    },
+    {
+      "name": "centered shifted odd K/H density channel",
+      "shifted_status": "allowed only after exact conditional centering",
+      "formal_size": "first nonzero effect modeled as O(g_j^4 M_j^4)",
+      "theorem_role": "summable second-cumulant remainder after mean-zero cancellation",
+      "may_remain_as_residual": true,
+      "open_debt": "prove conditional mean zero plus covariance envelope in shifted variables"
+    },
+    {
+      "name": "post-retention nonlinear remainder",
+      "shifted_status": "allowed only with scale gain beyond O(g_j^2)",
+      "formal_size": "O(g_j^{2+delta} P(M_j))",
+      "theorem_role": "small summable error after retained coordinates/action are removed",
+      "may_remain_as_residual": true,
+      "open_debt": "prove deterministic expansion and probabilistic good/exceptional-sector summability"
+    }
+  ],
+  "theorem_clauses": [
+    {
+      "label": "T1 shifted disintegration",
+      "statement_needed": "The rooted common-stem variables define the retained quotient and admit a controlled conditional K/H split on each finite-ratio shell.",
+      "current_evidence": "C5AY gives rank-17 tangent quotient with exact reflection pairing; C5AZ gives rooted gauge covariance and finite-block reflection covariance.",
+      "status": "open theorem obligation",
+      "failure_meaning": "The C5AY/C5AZ repair would remain a finite-block coordinate trick, not a shell theorem."
+    },
+    {
+      "label": "T2 no unretained O(g) or O(g^2) survivors",
+      "statement_needed": "All O(g_j M_j^3), O(g_j^2 M_j^2), and O(g_j^2 M_j^4) terms are either retained, renormalized, or placed in a comparison potential.",
+      "current_evidence": "C5AG/C5AH bookkeeping identifies exactly which terms are forbidden as residuals.",
+      "status": "contractual requirement, not yet proven in shifted nonlinear chart",
+      "failure_meaning": "A nonsummable shell series survives, so the route fails in its current form."
+    },
+    {
+      "label": "T3 centered odd density channel",
+      "statement_needed": "The odd K/H density contribution has zero conditional mean and its first surviving effect satisfies a rooted covariance bound at O(g_j^4 M_j^4).",
+      "current_evidence": "Corrected C5AZ rooted covariance scale C_cov^2=0.214804676794; C5AV-C5AW supplied the deterministic identity template.",
+      "status": "open proof/falsification target",
+      "failure_meaning": "A hidden O(g_j^2 M_j^2) density drift remains; C5AP/C5AQ/C5BA collapse."
+    },
+    {
+      "label": "T4 quasilocal conditional density",
+      "statement_needed": "The conditional density/Jacobian constants are stable under microscopic integration and depend quasilocally on the shell boundary.",
+      "current_evidence": "Only finite-block and formal shifted-coordinate evidence so far.",
+      "status": "major open bridge",
+      "failure_meaning": "The finite-block calculation cannot be promoted to constructive continuum control."
+    },
+    {
+      "label": "T5 exceptional sector",
+      "statement_needed": "Large-field, chart-boundary, and near-Cartan exceptional events have summable probability or are absorbed by retained variables/comparison potentials.",
+      "current_evidence": "Near-Cartan visibility has been diagnosed as physically necessary, not solved.",
+      "status": "open and high-risk",
+      "failure_meaning": "The route may miss the coherent abelian/Cartan valleys that motivated the project."
+    },
+    {
+      "label": "T6 RP/reflection placement",
+      "statement_needed": "The retained coordinate, density, and comparison-potential package is compatible with reflection positivity at the one-shell level.",
+      "current_evidence": "C5AY/C5AZ removed the based-log reflection-covariance obstruction at finite block.",
+      "status": "partly repaired, theorem still open",
+      "failure_meaning": "Even correct local estimates may not imply a physical Hilbert-space mass gap."
+    }
+  ],
+  "residual_budgets": [
+    {
+      "name": "forbidden unretained cubic",
+      "model_term": "O(g_j M_j^3)",
+      "unit_bound": 1.0,
+      "partial_10j0": 1132327.60848192,
+      "partial_100j0": 5909723.723221764,
+      "tail_after_100j0": null,
+      "classification": "FORBIDDEN",
+      "interpretation": "This grows too strongly to leave outside the retained shell action."
+    },
+    {
+      "name": "forbidden unmatched shifted quadratic density/action",
+      "model_term": "O(g_j^2 M_j^2)",
+      "unit_bound": 0.21480467679414722,
+      "partial_10j0": 84.1264887164252,
+      "partial_100j0": 186.47318860001602,
+      "tail_after_100j0": null,
+      "classification": "FORBIDDEN",
+      "interpretation": "Even with the shifted constant, an unmatched O(g^2) shell drift is nonsummable."
+    },
+    {
+      "name": "forbidden unmatched quartic comparison defect",
+      "model_term": "O(g_j^2 M_j^4)",
+      "unit_bound": 0.0280541227163,
+      "partial_10j0": 1876.0560723781296,
+      "partial_100j0": 4649.29677415247,
+      "tail_after_100j0": null,
+      "classification": "FORBIDDEN",
+      "interpretation": "Quartic local effects must be retained or absorbed in Phi4, not treated as error."
+    },
+    {
+      "name": "allowed centered shifted odd second cumulant",
+      "model_term": "O(g_j^4 M_j^4)",
+      "unit_bound": 0.21480467679414722,
+      "partial_10j0": 0.39671088919525677,
+      "partial_100j0": 0.45619655606640613,
+      "tail_after_100j0": 0.009606301607646323,
+      "classification": "ALLOWED IF CENTERED",
+      "interpretation": "Summable only after exact conditional mean-zero cancellation is proven."
+    },
+    {
+      "name": "allowed post-retention cubic-gain remainder",
+      "model_term": "O(g_j^3 M_j^6)",
+      "unit_bound": 0.0280541227163,
+      "partial_10j0": 1569.7340515252642,
+      "partial_100j0": 2470.1176879686386,
+      "tail_after_100j0": 878.0710382625783,
+      "classification": "ALLOWED WITH PROOF",
+      "interpretation": "Summable scale gain, but needs deterministic expansion plus probability control."
+    },
+    {
+      "name": "allowed post-retention quartic-gain remainder",
+      "model_term": "O(g_j^4 M_j^8)",
+      "unit_bound": 0.0280541227163,
+      "partial_10j0": 1409.926876397067,
+      "partial_100j0": 1725.499978320808,
+      "tail_after_100j0": 74.8599521575672,
+      "classification": "ALLOWED WITH PROOF",
+      "interpretation": "Summable in principle, but log powers make constants nontrivial."
+    }
+  ],
+  "old_vs_rooted_centered_odd": {
+    "old_cov_sq": 0.0315650978782,
+    "rooted_cov_sq": 0.21480467679414722,
+    "ratio_rooted_to_old": 6.80513260636835,
+    "old_partial_10j0": 0.0582958352382448,
+    "rooted_partial_10j0": 0.39671088919525677,
+    "old_partial_100j0": 0.06703712953947294,
+    "rooted_partial_100j0": 0.45619655606640613
+  },
+  "decision": {
+    "shifted_coordinate_package_frozen": true,
+    "reflection_covariant_finite_block": true,
+    "normalized_contract_consistent": true,
+    "exact_one_shell_theorem_proved": false,
+    "next_checkpoint": "C5BB: prove or falsify the shifted good-sector one-shell expansion, especially T1-T3: disintegration, no O(g)/O(g^2) survivors, and centered odd density covariance.",
+    "reason": "C5BA passes as a contract checkpoint because the finite-block shifted coordinate package removes the reflection-coordinate obstruction and the normalized budgets still separate forbidden from summable terms. It is not a theorem checkpoint: T1-T6 remain proof obligations."
+  }
+}
