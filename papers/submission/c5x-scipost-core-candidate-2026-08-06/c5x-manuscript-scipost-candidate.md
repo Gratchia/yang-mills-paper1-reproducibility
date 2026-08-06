@@ -1292,7 +1292,7 @@ The author declares no competing interests.
 
 ### Code and reproducibility availability
 
-The finite-dimensional verification scripts, wrapper, manifest structure, and numerical-result explanations are prepared as supplementary material.  A public repository release should be finalized before journal submission, preferably at `https://github.com/Gratchia/yang-mills-paper1-reproducibility`, and the final manuscript should cite the exact release URL or archival DOI.
+The finite-dimensional verification scripts, wrapper, manifest structure, and numerical-result explanations are available in the public reproducibility repository at `https://github.com/Gratchia/yang-mills-paper1-reproducibility`.
 
 ### AI-assisted work disclosure
 
