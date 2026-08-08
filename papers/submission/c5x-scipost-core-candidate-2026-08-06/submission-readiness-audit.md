@@ -72,13 +72,14 @@ Allowed limited use:
 | SciPost template | open | either migrate to SciPost template or keep 10pt general LaTeX if accepted |
 | DOI-linked references | pass-practical | DOI audit recorded in `literature-doi-audit.md`; final browser/author check still prudent |
 | representative literature | near pass | Balaban/path-gauge/maximal-tree boundary is stated; one final expert-facing novelty check still recommended |
+| publication-voice/internal-language scan | pass | v5 source and latest PDF checked: no audit-file/checkpoint/handoff/ledger/rooted-package/path-package/old-latest workflow language remains in manuscript prose |
 | reproducibility package | local pass | GitHub-ready staging folder created and both core and downstream wrappers passed locally; public repository/release still needed |
 | author metadata | pass | author supplied Higher Colleges of Technology--CERT and work email `gmkrttchian1@hct.ac.ae`; personal email retained as alternate note |
 | acknowledgements | pass | author requested deletion; candidate manuscript omits acknowledgements |
 | funding statement | pass | no external funding |
 | competing interests | pass | no competing interests |
 | AI-use disclosure | pass | author confirmed current wording is acceptable |
-| public code availability | blocked | populate or update GitHub/release, then cite exact URL |
+| public code availability | local-ready | MIT-licensed GitHub-ready staging package exists and passed locally; repository-content zip `yang-mills-paper1-reproducibility-mit-ready-2026-08-06.zip` created; public push/release still needed |
 | final PDF | blocked | compile and visually inspect final PDF |
 | final submission approval | blocked | author must explicitly approve submission |
 
@@ -86,8 +87,8 @@ Allowed limited use:
 
 1. Clean the candidate LaTeX source until it compiles without Markdown artifacts.
 2. Convert the source to the SciPost template if practical, or keep a 10pt general LaTeX version with hyperref and DOI links.
-3. Choose a code license and decide whether the public repository includes only paper-core checks or the optional downstream correction chain as well.
-4. Push or otherwise publish the reproducibility package and record the exact URL/release.
-5. Confirm submission ethics/status and preferred SciPost specialty/referee suggestions.
+3. Push or otherwise publish the reproducibility package and record the exact URL/release.
+4. Confirm submission ethics/status and preferred SciPost specialty/referee suggestions.
+5. Run the publication-voice/internal-language scan from `scientific-paper-style-guide.md`.
 6. Compile and visually review the final PDF using `pdf-build-instructions.md`.
 7. Only after author approval, proceed to SciPost direct submission.

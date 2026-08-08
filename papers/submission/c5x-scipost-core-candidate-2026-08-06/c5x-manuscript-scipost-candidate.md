@@ -4,21 +4,21 @@
 
 ## Abstract
 
-We isolate a finite-block coordinate obstruction for based holonomy-log variables in \(SU(2)\) lattice Yang--Mills theory.  The block is the \(n=2\) four-dimensional curvature-tile block with 24 oriented coarse face loops and a 17-dimensional Bianchi-compatible retained curvature space.  Time reflection preserves this retained space at the tangent level.  For the original based holonomy logs, however, reflection sends the 12 time-containing loops to inverse loops with a six-segment cyclic rebase.  The induced partial-transport conjugation is invisible to Wilson traces but visible to based Lie-algebra logarithms.  An explicit two-link field gives an exact nonzero quadratic BCH defect after projection to the retained space.  We then classify the uniform cyclic shifts that remove the ordered-path obstruction: precisely the shifts \(1\) and \(5\) preserve the tangent rows and turn reflected paths into same-order or exact inverse words.  For shift \(1\), canonical stems from the reflection-fixed root \(x_\ast=(1,0,0,0)\) place all loop logs in one gauge-covariant color frame without spoiling reflection closure.  The rooted package is distinct from the eight-edge shifted core and has different density constants.  All results are finite-block coordinate statements.
+We isolate a finite-block coordinate obstruction for based holonomy-log variables in \(SU(2)\) lattice Yang--Mills theory.  The block is the \(n=2\) four-dimensional curvature-tile block with 24 oriented coarse face loops and a 17-dimensional Bianchi-compatible retained curvature space.  Time reflection preserves this retained space at the tangent level.  For the original based holonomy logs, however, reflection sends the 12 time-containing loops to inverse loops with a six-segment cyclic rebase.  The induced partial-transport conjugation is invisible to Wilson traces but visible to based Lie-algebra logarithms.  An explicit two-link field gives an exact nonzero quadratic BCH defect after projection to the retained space.  We then classify the uniform cyclic shifts that remove the ordered-path obstruction: precisely the shifts \(1\) and \(5\) preserve the tangent rows and turn reflected paths into same-order or exact inverse words.  For shift \(1\), canonical stems from the reflection-fixed root \(x_\ast=(1,0,0,0)\) place all loop logs in one gauge-covariant color frame without spoiling reflection closure.  The rooted coordinate system is distinct from the eight-edge shifted core and has different density constants.  All results are finite-block coordinate statements.
 
 **Keywords:** lattice gauge theory; Yang--Mills theory; reflection compatibility; holonomy logs; Bianchi identities; finite blocks.
 
 ## 1. Introduction
 
-In constructive approaches to four-dimensional Yang--Mills theory, finite-regulator coordinate choices must preserve the structural properties intended to survive the continuum limit.  One such property is compatibility with Euclidean time reflection.  This paper studies a finite local instance of that issue: whether a retained holonomy-log coordinate on a fixed \(SU(2)\) lattice block realizes the same reflection symmetry at nonlinear group level that it has at tangent level.
+In constructive approaches to four-dimensional Yang--Mills theory, finite-regulator coordinate choices must preserve the structural properties intended to survive the continuum limit.  Standard reference points include Osterwalder--Schrader reconstruction and reflection positivity \cite{OsterwalderSchrader1973,OsterwalderSchrader1975}, lattice-gauge reflection positivity \cite{OsterwalderSeiler1978}, and Wilson's lattice gauge formulation \cite{Wilson1974,KogutSusskind1975}.  This paper studies a finite local instance of the corresponding coordinate issue: whether a retained holonomy-log coordinate on a fixed \(SU(2)\) lattice block realizes the same Euclidean time-reflection symmetry at nonlinear group level that it has at tangent level.
 
 The retained variables are based holonomy-log coordinates associated with the 24 boundary face loops of the \(n=2\), four-dimensional block, projected to the 17-dimensional subspace compatible with the finite Bianchi relations.  The result is intended as a finite-regulator coordinate-design step inside a broader constructive program, not as a continuum construction or a spectral-gap theorem.
 
-For the original based-loop ordering, reflection compatibility fails at finite group level.  The tangent retained quotient and the minimum-action tangent lift are reflection-compatible, but reflection of the time-containing holonomies produces inverse loops with a cyclic basepoint shift, hence a partial-transport conjugation.  This conjugation is invisible to Wilson traces but not to based Lie-algebra logarithms.
+For the original based-loop ordering, reflection compatibility fails at finite group level.  The tangent retained quotient and the minimum-action tangent lift are reflection-compatible, but reflection of the time-containing holonomies produces inverse loops with a cyclic basepoint shift, hence a partial-transport conjugation.  This conjugation is invisible to Wilson traces, whose use is standard in lattice and loop-variable formulations \cite{Wilson1974,Mandelstam1968,Giles1981}, but not to based Lie-algebra logarithms.
 
-The contribution is finite and local.  We prove the exact rank-17 retained quotient, identify an exact retained quadratic BCH obstruction for the original based paths, classify the valid uniform cyclic shifts as \(1\) and \(5\), and construct a shift-\(1\) rooted package whose holonomies transform by one common root conjugation and close exactly under time reflection.  The common-root and stem mechanism itself is standard in path-gauge and maximal-tree formulations; the point of the present paper is the explicit fixed-block reflection obstruction and repair for this retained holonomy-log package.
+The contribution is finite and local.  We prove the exact rank-17 retained quotient, identify an exact retained quadratic BCH obstruction for the original based paths, classify the valid uniform cyclic shifts as \(1\) and \(5\), and construct a shift-\(1\) rooted coordinate system whose holonomies transform by one common root conjugation and close exactly under time reflection.  The common-root and stem mechanism itself is standard in path-gauge and maximal-tree formulations \cite{Batrouni1982,BurbanoBauer2024}; the point of the present paper is the explicit fixed-block reflection obstruction and repair for this retained holonomy-log coordinate system.
 
-The scope is deliberately finite-regulator.  Continuum construction, Osterwalder--Schrader reconstruction, confinement, area laws, exponential clustering, exact one-shell RG estimates, exceptional-sector control, and the mass gap remain outside the claims of this paper.
+The scope is deliberately finite-regulator.  Continuum construction, Osterwalder--Schrader reconstruction, confinement, area laws, exponential clustering, exact constructive-RG estimates \cite{Balaban1985Averaging,Balaban1985Variational,Balaban1987RGI}, exceptional-sector control, and the mass gap remain outside the claims of this paper.
 
 ### 1.1 Finite checks and exact statements
 
@@ -260,7 +260,7 @@ This 51-dimensional space is the finite retained coordinate space used throughou
 
 ### 2.5 Minimum-action lift and complementary directions
 
-The larger constructive route also uses a preferred tangent lift from retained face data back to link logarithms.  For this paper, only the following finite-dimensional facts are needed.
+A later constructive analysis may also require a preferred tangent lift from retained face data back to link logarithms.  For this paper, only the following finite-dimensional facts are needed.
 
 Let \(D_1\) be the oriented link-to-plaquette coboundary.  The weak-coupling quadratic Wilson action is
 
@@ -283,7 +283,7 @@ R_{\rm face}a=Qk.
 
 On \(\mathcal G^\perp\), \(D_1^TD_1\) is positive definite, so the constrained minimizer is unique.  Equivalently, \(L\) is the Moore--Penrose minimum-norm section of the feasible affine space.  The same scalar lift is used independently in each \(SU(2)\) color direction.  This gives a retained lifted subspace of color dimension 51.
 
-The orthogonal complement used in the route decomposes into positive high modes and gauge modes.  For the \(n=2\) block, the finite split has:
+The corresponding orthogonal complement decomposes into positive high modes and gauge modes.  For the \(n=2\) block, the finite split has:
 
 | component | scalar dimension | color dimension |
 |---|---:|---:|
@@ -630,7 +630,7 @@ This explains the finite-\(g\) pattern: the linear retained quotient can be exac
 
 ### Wilson traces versus based logs
 
-Wilson traces and conjugacy-class variables do not see this cyclic-rebase defect, because
+Wilson traces and conjugacy-class variables do not see this cyclic-rebase defect \cite{Wilson1974,Mandelstam1968,Giles1981}, because
 
 \[
 \operatorname{tr}(U_\alpha^{-1}U_\gamma U_\alpha)
@@ -833,7 +833,7 @@ s+6\equiv8-s\pmod8,
 2s\equiv2\pmod8.
 \]
 
-The solutions are \(s=1,5\).  Purely spatial loops close for every \(s\), so these are exactly the valid shifts for the complete package.  With \(s=1\), there is a signed permutation
+The solutions are \(s=1,5\).  Purely spatial loops close for every \(s\), so these are exactly the valid shifts for the complete 24-loop system.  With \(s=1\), there is a signed permutation
 
 \[
 \theta\widetilde\gamma_i
@@ -900,7 +900,7 @@ The first check is that the repair does not change the tangent retained variable
 
 The second check is the ordered-path closure itself.  This is the direct finite test for the Section 5 obstruction: exact inverse paths are required, rather than inverse-cyclic paths.
 
-| candidate | cyclic shift | exact same-order | exact inverse | unmatched |
+| case | cyclic shift | exact same-order | exact inverse | unmatched |
 |---|---:|---:|---:|---:|
 | original ordering | \(0\) | 12 | 0 | 12 |
 | uniform cyclic rebase | \(1\) | 12 | 12 | 0 |
@@ -934,25 +934,25 @@ Unlike the original coordinate, there is no visible finite-\(g\) growth of the e
 
 ### Shifted-core density constants
 
-This subsection concerns the eight-segment shifted-core paths \(\widetilde\gamma_i\), before stems are attached.  The cyclic shift changes the nonlinear Jacobian and therefore changes the retained half-density matrix.  The density operator must be rebuilt; it is not enough to reuse the old C5AW matrix.
+This subsection concerns the eight-segment shifted-core paths \(\widetilde\gamma_i\), before stems are attached.  The cyclic shift changes the nonlinear Jacobian and therefore changes the retained half-density matrix.  The density operator must be rebuilt; it is not enough to reuse the density matrix computed for the earlier based coordinate.
 
 The relevant check is whether the rebuilt shifted retained and combined density matrices have even reflection residuals at roundoff scale.  The comparison is:
 
-| quantity | old based coordinate | shifted-core coordinate |
+| quantity | original based coordinate | shifted-core coordinate |
 |---|---:|---:|
 | combined reflection residual | \(0.940486836864\) | \(4.61255124852\times10^{-14}\) |
 | odd operator norm | \(0.388456446008\) | \(0.496353904572\) |
 | covariance \(L^2\) constant squared | \(0.0315650978782\) | \(0.050689424924\) |
 
-The shifted-core repair increases the finite odd-density constants, but it restores reflection placement.  These constants cannot be assigned to the rooted package without recomputing with the stems included; Section 7 performs that distinct calculation.  Neither set of constants proves the exact one-shell theorem.
+The shifted-core repair increases the finite odd-density constants, but it restores reflection placement.  These constants cannot be assigned to the rooted coordinate system without recomputing with the stems included; Section 7 performs that distinct calculation.  Neither set of constants proves an exact single-shell constructive theorem.
 
 ### Interpretation
 
 The shifted cyclic rebase repairs the obstruction found in Section 5 without changing the tangent retained quotient.  It is therefore a coordinate-placement repair, not a change of the finite retained curvature data.
 
-Gauge covariance imposes one further requirement.  A based loop log is conjugated by the gauge transformation at its basepoint.  Since the shifted loops have different basepoints, Section 7 adds a common-stem rooted package so that all retained holonomies transform by simultaneous conjugation at one fixed root.
+Gauge covariance imposes one further requirement.  A based loop log is conjugated by the gauge transformation at its basepoint.  Since the shifted loops have different basepoints, Section 7 adds a common-stem rooted construction so that all retained holonomies transform by simultaneous conjugation at one fixed root.
 
-## 7. Common-stem rooted package
+## 7. Common-stem rooted construction
 
 Section 6 repairs the reflection behavior of the shifted based loops.  We now impose a common color frame.
 
@@ -980,12 +980,12 @@ and define the rooted loop
 
 ### Proposition 7.1 — common-stem gauge-covariant repair
 
-For the shifted retained face-loop package of Section 6, there is a common-stem rooted realization based at \(x_\ast=(1,0,0,0)\) with the following properties:
+For the shifted retained face-loop system of Section 6, there is a common-stem rooted realization based at \(x_\ast=(1,0,0,0)\) with the following properties:
 
 1. each rooted path \(\widehat\gamma_i\) is a closed path based at \(x_\ast\);
 2. under finite lattice gauge transformations, every rooted holonomy transforms by simultaneous conjugation at \(x_\ast\);
 3. time reflection sends each rooted path exactly to another rooted path or its inverse;
-4. therefore the shifted retained holonomy-log package is both gauge-covariant in a common color frame and reflection-compatible at finite group level.
+4. therefore the shifted retained holonomy-log coordinate system is both gauge-covariant in a common color frame and reflection-compatible at finite group level.
 
 ### Proof
 
@@ -1075,11 +1075,11 @@ s_{\pi(i)}\widetilde\gamma_{\pi(i)}^{-1}s_{\pi(i)}^{-1}.
 
 Hence reflection acts by exact same/inverse rooted path equality.  No cyclic-rebase conjugation is reintroduced by the stems.  \(\square\)
 
-### Finite path-package check
+### Finite path-list check
 
-The proposition has one finite combinatorial input: the explicit stems are required to be compatible with the reflected shifted-loop package.  The path-package enumeration constructs canonical Manhattan stems from \(x_\ast\) to the 24 shifted loop basepoints, reflects every loop and stem as an ordered path word, and verifies that the rooted paths close exactly under same/inverse reflection.
+The proposition has one finite combinatorial input: the explicit stems are required to be compatible with the reflected shifted-loop system.  The path-list enumeration constructs canonical Manhattan stems from \(x_\ast\) to the 24 shifted loop basepoints, reflects every loop and stem as an ordered path word, and verifies that the rooted paths close exactly under same/inverse reflection.
 
-The rooted package has:
+The rooted construction has:
 
 | quantity | value |
 |---|---:|
@@ -1138,17 +1138,17 @@ Second, the shifted-core constants from Section 6 do **not** survive unchanged. 
 
 The rooted operator norm is larger by a factor \(2.05289554977\), and the squared covariance constant is larger by a factor \(4.23766253249\), than their shifted-core counterparts.  Reflection placement and the no-\(O(g)\) Jacobian result survive, but the numerical density budget must be rebaselined.  These finite checks support the implementation of the gauge-covariant rooted coordinate; they do not prove an exact nonlinear shell theorem, good-sector bounds, or exceptional-sector estimates.
 
-## 8. Relation to the larger constructive route
+## 8. Relation to possible multiscale use
 
-The rooted coordinate is intended for possible use in a later one-shell constructive analysis.  The distinction exposed in Section 7 matters there: a calculation on the eight-edge shifted cores is not a calculation on the gauge-covariant rooted loops.
+The rooted coordinate is intended for possible use in a later single-shell constructive analysis.  The distinction exposed in Section 7 matters there: a calculation on the eight-edge shifted cores is not a calculation on the gauge-covariant rooted loops.
 
-With the rooted constants, the finite centered covariance class remains summable under the same conditional centering hypothesis, but with the larger value \(0.214804676794\).  At the same time, the conservative rooted chart bound no longer closes at the originally chosen starting scale \(j_0=13082\).  In the present estimates, the adapted truncated bound first closes only near \(j=58443\).  Thus the rooted repair is a valid finite coordinate repair, but it is not by itself a completed one-shell estimate.
+With the rooted constants, the finite centered covariance class remains summable under the same conditional centering hypothesis, but with the larger value \(0.214804676794\).  At the same time, the conservative rooted chart bound no longer closes at the originally chosen starting scale \(j_0=13082\).  In the present estimates, the adapted truncated bound first closes only near \(j=58443\).  Thus the rooted repair is a valid finite coordinate repair, but it is not by itself a completed single-shell constructive estimate.
 
 These downstream facts do not strengthen the finite theorem, but they explain why shifted-core and rooted objects must remain distinct before any multiscale claim is made.  In particular, the present paper does not claim:
 
-- an exact one-shell theorem;
+- an exact single-shell constructive theorem;
 - a deterministic compact-log remainder theorem;
-- compatibility of the rooted package with the current shell schedule;
+- compatibility of the rooted construction with any later shell schedule;
 - exceptional-sector control;
 - continuum Yang--Mills construction;
 - a mass gap.
@@ -1160,7 +1160,7 @@ The finite-block repair leaves several major questions open:
 1. deterministic compact-log good-sector bounds;
 2. singular-stratum and near-Cartan estimates;
 3. chart/large-field exceptional-sector summability;
-4. exact nonlinear one-shell disintegration/Radon--Nikodym theorem;
+4. exact nonlinear single-shell disintegration/Radon--Nikodym theorem;
 5. continuum limit;
 6. Yang--Mills mass gap.
 
@@ -1168,73 +1168,73 @@ These problems are not addressed here.
 
 ## 10. Reproducibility appendix
 
-The reproducibility specification and control protocol are:
+The supplementary reproducibility materials are:
 
 - `papers/c5x-reproducibility-package.md`;
 - `papers/c5x-verification-control-protocol.md`.
 
 Reproducibility resources:
 
-| internal label | script | report |
+| verification item | script | output record |
 |---|---|---|
 | exact certificates | `calculations/c5x_exact_finite_claim_certificates.py` | `outputs/c5x_exact_finite_claim_certificates.json` |
-| C5AX | `calculations/c5ax_reflection_retained_density.py` | `outputs/clean-start-c5ax-reflection-retained-density.md` |
-| C5AY | `calculations/c5ay_reflection_covariant_retained_coordinates.py` | `outputs/clean-start-c5ay-reflection-covariant-retained-coordinates.md` |
-| C5AZ | `calculations/c5az_shifted_coordinate_package_regression.py` | `outputs/clean-start-c5az-shifted-coordinate-package-regression.md` |
+| linear/reflection-density check | `calculations/c5ax_reflection_retained_density.py` | `outputs/clean-start-c5ax-reflection-retained-density.md` |
+| shifted-coordinate check | `calculations/c5ay_reflection_covariant_retained_coordinates.py` | `outputs/clean-start-c5ay-reflection-covariant-retained-coordinates.md` |
+| rooted-coordinate regression | `calculations/c5az_shifted_coordinate_package_regression.py` | `outputs/clean-start-c5az-shifted-coordinate-package-regression.md` |
 
-The one-command reproduction script records the runtime environment, checks native exit codes, asserts expected decisions and rooted object identity, computes the transitive local Python import closure, and writes a project-relative SHA256 manifest.
+The one-command reproduction script records the runtime environment, checks native exit codes, asserts expected decisions and rooted object identity, computes the transitive local Python import closure, and writes a repository-relative SHA256 manifest.
 
 Reproducibility controls:
 
 | item | status |
 |---|---|
-| one-command reproduction script | done |
-| runtime fallback note | done |
-| latest rerun folder | `outputs/c5x-reproducibility-rerun/` |
-| latest SHA256 manifest | `outputs/c5x-reproducibility-rerun/sha256_manifest.txt` |
+| one-command reproduction script | available |
+| runtime fallback documentation | included |
+| reproduction output folder | `outputs/c5x-reproducibility-rerun/` |
+| SHA256 manifest | `outputs/c5x-reproducibility-rerun/sha256_manifest.txt` |
 | rooted path hash/inventory assertion | passed |
-| shifted-core versus rooted constant assertion | passed; old constants explicitly not preserved |
-| C5BA--C5BI correction-chain assertions | passed with `-IncludeDownstream` |
+| shifted-core versus rooted constant assertion | passed; previous constants explicitly not preserved |
+| downstream diagnostic assertions | passed with `-IncludeDownstream` |
 | transitive local Python dependencies | 30 |
 
-The manifest is not copied into the prose because it changes whenever a controlled source changes.  The authoritative records are `outputs/c5x-reproducibility-rerun/manifest.json` and `sha256_manifest.txt`; every listed file path is relative to the project root.
+The manifest is not copied into the prose because it changes whenever a source file changes.  The authoritative records are `outputs/c5x-reproducibility-rerun/manifest.json` and `sha256_manifest.txt`; every listed file path is relative to the repository root.
 
 The reproduction run verifies the intended finite-block pattern:
 
-- C5AX: the linear quotient reflection implementation is roundoff-correct, while the original based finite-\(g\) retained log has a visible nonlinear reflection defect;
-- C5AY: uniform cyclic shifts \(1\) and \(5\) are exact; the paper uses shift \(1\), giving 12 same-order and 12 exact-inverse reflected paths with no unmatched shifted paths;
-- C5AZ: rooted gauge covariance and reflection residuals are at roundoff scale, the rooted density is recomputed, and preservation of the shifted-core constants is explicitly false.
+- The linear quotient reflection implementation is roundoff-correct, while the original based finite-\(g\) retained log has a visible nonlinear reflection defect.
+- Uniform cyclic shifts \(1\) and \(5\) are exact; the paper uses shift \(1\), giving 12 same-order and 12 exact-inverse reflected paths with no unmatched shifted paths.
+- Rooted gauge covariance and reflection residuals are at roundoff scale, the rooted density is recomputed, and preservation of the shifted-core constants is explicitly false.
 
 ### Main-text versus appendix table policy
 
 For readability, the main text reports only the decisive finite-block tables: the linear quotient residual summary, the original finite-\(g\) obstruction witness, the valid-shift/ordered-path closure table, the shifted finite-\(g\) equivariance table, and the rooted common-stem path/group residual summaries.
 
-Long density-operator rows and full verification outputs are recorded in the reproducibility appendix and reproduction reports.  This keeps the manuscript readable while preserving the exact numerical trail.
+Long density-operator rows and full verification outputs are recorded in the reproducibility appendix and supplementary reproduction records.  This keeps the manuscript readable while preserving the exact numerical trail.
 
 The numerical residuals certify finite-block implementation and verification checks.  The formal lemmas and propositions carry the mathematical claims.
 
 ## 11. Relation to primary-source literature
 
-The separate audit file `papers/c5x-literature-audit-plan.md` records access level and portions inspected.  The sources closest to the present paper are Osterwalder--Schrader reconstruction and reflection positivity, Osterwalder--Seiler lattice gauge positivity, Wilson's lattice gauge formulation, loop-variable work, and path-gauge or maximal-tree formulations of nonabelian lattice gauge fields.
+This section situates the finite-block result against the primary literature most directly relevant to reflection positivity, lattice gauge variables, loop formulations, local compact gauge-field control, and path-gauge or maximal-tree constructions.  The sources closest to the present paper are Osterwalder--Schrader reconstruction and reflection positivity \cite{OsterwalderSchrader1973,OsterwalderSchrader1975}, Osterwalder--Seiler lattice gauge positivity \cite{OsterwalderSeiler1978}, Wilson's lattice gauge formulation \cite{Wilson1974,Wilson2005,KogutSusskind1975}, loop-variable work \cite{Mandelstam1968,Giles1981}, local compact gauge-field control \cite{Luscher1982}, and path-gauge or maximal-tree formulations of nonabelian lattice gauge fields \cite{Batrouni1982,BurbanoBauer2024}.
 
-Two prior-art findings materially narrow the wording.  Batrouni's path gauge already chooses an origin and paths to lattice sites, and its nonabelian Bianchi identity uses ordered parallel-transport connectors.  Burbano and Bauer's maximal-tree construction gives unique paths, closes all remaining loops at one origin, retains one simultaneous \(SU(2)\) conjugation there, and explicitly uses petal/stem language.  Common roots, stems, and simultaneous root conjugation are therefore not new contributions of this paper.
+Two prior-art findings materially narrow the wording.  Batrouni's path gauge already chooses an origin and paths to lattice sites, and its nonabelian Bianchi identity uses ordered parallel-transport connectors \cite{Batrouni1982}.  Burbano and Bauer's maximal-tree construction gives unique paths, closes all remaining loops at one origin, retains one simultaneous \(SU(2)\) conjugation there, and explicitly uses petal/stem language \cite{BurbanoBauer2024}.  Common roots, stems, and simultaneous root conjugation are therefore not new contributions of this paper.
 
-The following background list records the wider citation context; exact access labels and page-level notes are in the audit file.
+The following background list records the wider citation context for these sources.
 
 | source | what it anchors | implication for this paper |
 |---|---|---|
 | K. Osterwalder and R. Schrader, *Axioms for Euclidean Green's functions*, Comm. Math. Phys. 31, 83--112 (1973), DOI `10.1007/BF01645738` | Euclidean reconstruction framework and reflection positivity as a structural positivity condition | OS positivity motivates reflection compatibility, but the present finite-block result is not an OS reconstruction theorem or a Hilbert-space construction. |
 | K. Osterwalder and R. Schrader, *Axioms for Euclidean Green's functions II*, Comm. Math. Phys. 42, 281--305 (1975), DOI `10.1007/BF01608978` | corrected/extended OS reconstruction conditions | Finite-block coordinate covariance alone does not imply continuum reconstruction. |
 | K. Osterwalder and E. Seiler, *Gauge field theories on a lattice*, Ann. Phys. 110, 440--471 (1978), DOI `10.1016/0003-4916(78)90039-8` | reflection/physical positivity and transfer-matrix structure for lattice gauge approximations | Reflection positivity for suitable lattice gauge actions is standard background; this paper concerns a coordinate-placement compatibility issue, not a new lattice positivity theorem. |
-| K. G. Wilson, *Confinement of quarks*, Phys. Rev. D 10, 2445--2459 (1974), DOI `10.1103/PhysRevD.10.2445`; see also Wilson's retrospective `arXiv:hep-lat/0412043` | Wilson lattice gauge variables and Wilson-loop action background | Wilson loops/traces are standard.  The paper's distinction is between trace/conjugacy variables and based Lie-algebra logs in one finite retained-coordinate package. |
+| K. G. Wilson, *Confinement of quarks*, Phys. Rev. D 10, 2445--2459 (1974), DOI `10.1103/PhysRevD.10.2445`; see also Wilson's retrospective `arXiv:hep-lat/0412043` | Wilson lattice gauge variables and Wilson-loop action background | Wilson loops/traces are standard.  The paper's distinction is between trace/conjugacy variables and based Lie-algebra logs in one finite retained-coordinate system. |
 | J. Kogut and L. Susskind, *Hamiltonian formulation of Wilson's lattice gauge theories*, Phys. Rev. D 11, 395--408 (1975), DOI `10.1103/PhysRevD.11.395` | group-valued link variables and gauge-theory lattice Hamiltonian context | The paper's link and path conventions are standard lattice-gauge bookkeeping, specialized to a finite \(n=2\) block. |
 | S. Mandelstam, *Feynman rules for electromagnetic and Yang--Mills fields from the gauge-independent field-theoretic formalism*, Phys. Rev. 175, 1580--1604 (1968), DOI `10.1103/PhysRev.175.1580` | loop variables and gauge-invariant loop formalism | Trace/conjugacy behavior is standard nonabelian loop-variable behavior, not a new observation of this paper. |
-| R. Giles, *Reconstruction of gauge potentials from Wilson loops*, Phys. Rev. D 24, 2160--2168 (1981), DOI `10.1103/PhysRevD.24.2160` | Wilson-loop reconstruction/gauge-invariant loop data context | Wilson loops are not deficient generally; the issue here is that trace variables are not the oriented based-log retained coordinates used in this finite route. |
+| R. Giles, *Reconstruction of gauge potentials from Wilson loops*, Phys. Rev. D 24, 2160--2168 (1981), DOI `10.1103/PhysRevD.24.2160` | Wilson-loop reconstruction/gauge-invariant loop data context | Wilson loops are not deficient generally; the issue here is that trace variables are not the oriented based-log retained coordinates used in this finite construction. |
 | M. Lüscher, *Topology of lattice gauge fields*, Comm. Math. Phys. 85, 39--48 (1982), DOI `10.1007/BF02029132` | local lattice gauge fields under small-action/small-field hypotheses and compact group care | The principal-log chart used here is local and finite-block; global compact-gauge and continuum topological claims are outside scope. |
 
 ### Consequence for the present paper
 
-The standard literature already supplies reflection positivity/reconstruction language, lattice gauge link and plaquette variables, common-origin path gauges and maximal-tree loops, nonabelian Bianchi connectors, stems, Wilson loops, and trace/conjugacy invariance.  The paper's contribution is therefore narrower:
+The standard literature already supplies reflection positivity/reconstruction language \cite{OsterwalderSchrader1973,OsterwalderSchrader1975,OsterwalderSeiler1978}, lattice gauge link and plaquette variables \cite{Wilson1974,KogutSusskind1975}, common-origin path gauges and maximal-tree loops \cite{Batrouni1982,BurbanoBauer2024}, nonabelian Bianchi connectors, stems, Wilson loops, and trace/conjugacy invariance \cite{Mandelstam1968,Giles1981}.  The paper's contribution is therefore narrower:
 
 > in the explicitly defined \(n=2\), \(4D\), \(SU(2)\) retained block, the original path convention has an exact retained quadratic BCH obstruction under reflection; the exact uniform repair shifts are \(1\) and \(5\), and the shift-\(1\) loops admit the stated reflection-compatible canonical stems.
 
